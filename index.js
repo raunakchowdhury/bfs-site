@@ -2,6 +2,8 @@ const express = require("express");
 const app = express();
 const port = 8081;
 
+app.set("view engine", "pug");
+
 app.get("/", (req, res) => {
   res.send("Site currently under construction!");
 });
@@ -24,4 +26,4 @@ app.get("/blog", (req, res) => {
   res.send("Will show blogs, complete with pictures and stuff.");
 });
 
-app.listen(port, () => console.log(`Port running on ${port}`));
+app.listen(port, () => console.log(`App running on localhost:${port}`));
