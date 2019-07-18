@@ -1,0 +1,23 @@
+{
+  "name": "bfs-site",
+  "version": "1.0.0",
+  "description": "Website for BFS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raunakchowdhury/bfs-site.git"
+  },
+  "author": "BFS Webdev Team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raunakchowdhury/bfs-site/issues"
+  },
+  "homepage": "https://github.com/raunakchowdhury/bfs-site#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node": "^12.6.0"
+  }
+}
