@@ -1,11 +1,19 @@
 const express = require("express");
+const nunjucks = require("nunjucks");
 const app = express();
 const port = 8081;
 
-app.set("view engine", "pug");
+// app.set("view engine", "nunjucks");
+
+nunjucks.configure("views", {
+  autoescape: true,
+  express: app
+});
 
 app.get("/", (req, res) => {
-  res.send("Site currently under construction!");
+  res.render("index.html", {
+    user: "yulin"
+  });
 });
 
 app.get("/about", (req, res) => {

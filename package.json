@@ -19,6 +19,7 @@
   "homepage": "https://github.com/raunakchowdhury/bfs-site#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "node": "^12.6.0"
+    "node": "^12.6.0",
+    "nunjucks": "^3.2.0"
   }
 }
