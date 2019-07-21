@@ -1,0 +1,36 @@
+/* ----- COLORS -----
+
+#4CBB85 - ocean green
+#FAFFF9 - baby powder
+#828A95 - roman silver
+#91D7F7 - pale cyan
+#CCD7E4 - columbia blue
+
+----- COLORS ----- */
+
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #FAFFF9;
+}
+
+.heading {
+    padding: 25px;
+    background-color: #4CBB85;
+    margin: 0px;
+}
+
+.heading img {
+    display: block;
+    border: none;
+    width: 10%;
+    height: 10%;
+}
+
+h1 {
+    font-family: sans-serif;
+    color: #4CBB85;
+    text-align: center;
+    font-size: 100px;
+}

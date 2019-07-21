@@ -10,6 +10,9 @@ nunjucks.configure("views", {
   express: app
 });
 
+// using stylesheets
+app.use('/static', express.static('static'))
+
 app.get("/", (req, res) => {
   res.render("index.html", {
     user: "yulin"
