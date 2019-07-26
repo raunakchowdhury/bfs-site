@@ -8,7 +8,17 @@
     <body>
         <div class="heading">
             <img src="/static/b4s-logo-01.png" alt="b4s logo">
+            
         </div>
-        <h1>Welcome to the BlockchainsForSchools website, {{user}}!</h1>
+
+        <!-- checks to see if there is a username before displaying welcome message-->
+        {% block welcome %}
+        {% if user == null %}
+            <h1>Welcome!</h1>
+        {% else %}
+            <h1>Welcome, {{user}}!</h1>
+        {% endif %}
+        {% endblock %}
+
     </body>
 </html>
