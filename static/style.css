@@ -8,7 +8,6 @@
 
 ----- COLORS ----- */
 
-
 body {
     padding: 0;
     margin: 0;
@@ -35,4 +34,12 @@ h1 {
     font-size: 100px;
     padding-top: 50px;
     margin:0px;
+}
+
+.about p {
+    font-family: sans-serif;
+    text-align: center;
+    padding: 25px;
+    margin: 0px;
+    font-size: 18px;
 }
