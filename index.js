@@ -5,6 +5,12 @@ const port = 8081;
 
 // app.set("view engine", "nunjucks");
 
+//for example purposes only
+var EX_user = "Pogchamp";
+var EX_postTitle = "This is a real blog post";
+var EX_postAuthor = "Ahmed Sultan";
+var EX_postDate = "September 9 1999";
+
 nunjucks.configure("views", {
   autoescape: true,
   express: app
@@ -15,7 +21,10 @@ app.use('/static', express.static('static'))
 
 app.get("/", (req, res) => {
   res.render("index.html", {
-    user: "Pogchamp"
+    user: EX_user,
+    postTitle: EX_postTitle,
+    postAuthor: EX_postAuthor,
+    postDate: EX_postDate
   });
 });
 

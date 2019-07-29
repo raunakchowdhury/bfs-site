@@ -8,11 +8,15 @@
 
 ----- COLORS ----- */
 
+/* ----- BODY ----- */
+
 body {
     padding: 0;
     margin: 0;
     background-color: #FAFFF9;
 }
+
+/* ----- HEADER ----- */
 
 .heading {
     padding: 25px;
@@ -27,19 +31,66 @@ body {
     height: 10%;
 }
 
+/* ----- WELCOME ----- */
+
 h1 {
     font-family: sans-serif;
     color: #4CBB85;
     text-align: center;
     font-size: 100px;
     padding-top: 50px;
+    padding-bottom: 0px;
     margin:0px;
+}
+
+/* ----- ABOUT ----- */
+
+.about {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.about hr {
+    width: 100%;
 }
 
 .about p {
     font-family: sans-serif;
     text-align: center;
     padding: 25px;
+    padding-bottom: 0px;
     margin: 0px;
     font-size: 18px;
+}
+
+/* ----- POST ----- */
+
+.post {
+    padding: 5%;
+    padding-top: 1%;
+}
+
+.post h2 {
+    font-family: sans-serif;
+    font-weight: bolder;
+    font-size: 36px;
+    padding: 0px;
+    margin: 0px;
+}
+
+#byline {
+    font-family: sans-serif;
+    font-style: italic;
+    font-size: 14px;
+    padding-top: 0.5%;
+    margin: 0px;
+}
+
+.highlight {
+    color: #4CBB85;
+}
+
+.post .postBody p {
+    font-family: sans-serif;
+    text-align: justify;
 }
