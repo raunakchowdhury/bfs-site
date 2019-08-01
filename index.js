@@ -6,7 +6,7 @@ const port = 3000;
 // app.set("view engine", "nunjucks");
 app.use(express.static('static'));
 
-nunjucks.configure("views", {
+nunjucks.configure(__dirname + "/views", {
   autoescape: true,
   express: app
 });
