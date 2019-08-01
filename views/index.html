@@ -1,68 +1,88 @@
-<!DOCTYPE HTML>
-<html>
-    <head>
-        <title>BlockhainsForSchools</title>
-        <link rel="stylesheet" href="/static/style.css">
-        <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
-    </head>
-    <body>
-        <div class="heading">
-            <img src="/static/b4s-logo-01.png" alt="b4s logo">
-        </div>
+{% extends "base.html" %}
+{% block content %}
+  <div class="heading">
+    <img src="/b4s-logo-01.png" alt="b4s logo" />
+  </div>
 
-        <!-- checks to see if there is a username before displaying welcome message-->
-        {% block welcome %}
-        {% if user == null %}
-            <h1>Welcome!</h1>
-        {% else %}
-            <h1>Welcome, {{user}}!</h1>
-        {% endif %}
-        {% endblock %}
+  <!-- checks to see if there is a username before displaying welcome message-->
+  {% block welcome %} {% if user == null %}
+  <h1>Welcome!</h1>
+  {% else %}
+  <h1>Welcome, {{user}}!</h1>
+  {% endif %} {% endblock %}
 
-        <div class="about">
-            <p>BlockchainsForSchools is a 501(c)(3) nonprofit aimed at connecting students with the blockchain industry.</p>
-            <br>
-            <hr>
-            <!-- in future: add recap of previous events -->
-        </div> 
+  <div class="about">
+    <p>
+      BlockchainsForSchools is a 501(c)(3) nonprofit aimed at connecting students
+      with the blockchain industry. To that end we run a mentoring program, a summer internship program, and a hackathon.
+      We also host series of workshops with companies all across NYC.
+    </p>
+    <br />
+    <hr />
+    <p>
+      The website is currently under construction! If you have any questions, please <a href="mailto:hello@blockchainsforschools.com">email us</a>!
+    </p>
+    <!-- in future: add recap of previous events -->
+  </div>
 
-        <!-- fields postTitle, postAuthor, postDate (and eventaully postBody) will be procured from the databse through the index app -->
+  <!-- fields postTitle, postAuthor, postDate (and eventaully postBody) will be procured from the databse through the index app -->
 
-        <div class="post">
-            <h2>{{ postTitle }}</h2>
-            
-            <p id="byline">posted by <span class="highlight"><b>{{ postAuthor }}</b></span>, on <span class=highlight><b>{{ postDate }}</b></span></p>
+  <!-- <div class="post">
+    <h2>{{ postTitle }}</h2>
 
-            <div class="postBody">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua. Lectus nulla at volutpat diam. Urna neque viverra justo nec ultrices. Aliquam sem fringilla ut morbi tincidunt
-                augue. Feugiat in ante metus dictum at tempor commodo. Placerat vestibulum lectus mauris ultrices eros in. Nunc mi ipsum
-                faucibus vitae aliquet nec. Elementum nisi quis eleifend quam. Massa vitae tortor condimentum lacinia quis. Eget mi
-                proin sed libero enim sed faucibus turpis. Cras adipiscing enim eu turpis. Tincidunt lobortis feugiat vivamus at augue.
-                Fermentum dui faucibus in ornare quam viverra orci sagittis. Cursus in hac habitasse platea dictumst quisque sagittis.
-                Lobortis scelerisque fermentum dui faucibus in ornare quam viverra orci. Gravida quis blandit turpis cursus in hac
-                habitasse platea. Nunc sed id semper risus in hendrerit gravida rutrum. Pharetra massa massa ultricies mi quis
-                hendrerit.</p>
-                <p>Tincidunt augue interdum velit euismod in pellentesque massa. Ipsum dolor sit amet consectetur. Varius vel pharetra vel
-                turpis nunc eget. Est ultricies integer quis auctor elit sed vulputate mi. Vel fringilla est ullamcorper eget nulla
-                facilisi etiam dignissim diam. Tellus id interdum velit laoreet id donec ultrices. Tortor dignissim convallis aenean et
-                tortor at risus viverra. In hendrerit gravida rutrum quisque. Vel turpis nunc eget lorem dolor sed viverra ipsum. Nam
-                aliquam sem et tortor consequat id. Gravida rutrum quisque non tellus orci. Blandit volutpat maecenas volutpat blandit
-                aliquam etiam erat velit scelerisque. Viverra accumsan in nisl nisi scelerisque eu. Ultrices neque ornare aenean euismod
-                elementum nisi quis. Ridiculus mus mauris vitae ultricies leo integer malesuada nunc. Rhoncus mattis rhoncus urna neque
-                viverra justo nec ultrices dui. In egestas erat imperdiet sed euismod nisi porta. Eget gravida cum sociis natoque
-                penatibus et magnis dis. Neque sodales ut etiam sit amet nisl purus. Fames ac turpis egestas sed tempus urna et
-                pharetra.</p>
-                <p>Felis donec et odio pellentesque. Arcu non sodales neque sodales ut etiam sit amet. Eget egestas purus viverra accumsan
-                in nisl nisi scelerisque. Risus quis varius quam quisque id diam. Vitae justo eget magna fermentum. In pellentesque
-                massa placerat duis. Urna cursus eget nunc scelerisque. Consequat id porta nibh venenatis cras sed felis eget. Nec
-                tincidunt praesent semper feugiat nibh sed. Eleifend quam adipiscing vitae proin. Cras semper auctor neque vitae tempus
-                quam pellentesque nec. Quis viverra nibh cras pulvinar mattis nunc sed. Ac turpis egestas integer eget aliquet nibh
-                praesent tristique magna. Quis ipsum suspendisse ultrices gravida. Sodales neque sodales ut etiam sit amet nisl. Sed
-                velit dignissim sodales ut. Vel pretium lectus quam id. Augue eget arcu dictum varius duis at consectetur.</p>
-            </div>
+    <p id="byline">
+      posted by <span class="highlight"><b>{{ postAuthor }}</b></span
+      >, on <span class="highlight"><b>{{ postDate }}</b></span>
+    </p>
 
-        </div>
-
-    </body>
-</html>
+    <div class="postBody">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Lectus nulla at
+        volutpat diam. Urna neque viverra justo nec ultrices. Aliquam sem
+        fringilla ut morbi tincidunt augue. Feugiat in ante metus dictum at tempor
+        commodo. Placerat vestibulum lectus mauris ultrices eros in. Nunc mi ipsum
+        faucibus vitae aliquet nec. Elementum nisi quis eleifend quam. Massa vitae
+        tortor condimentum lacinia quis. Eget mi proin sed libero enim sed
+        faucibus turpis. Cras adipiscing enim eu turpis. Tincidunt lobortis
+        feugiat vivamus at augue. Fermentum dui faucibus in ornare quam viverra
+        orci sagittis. Cursus in hac habitasse platea dictumst quisque sagittis.
+        Lobortis scelerisque fermentum dui faucibus in ornare quam viverra orci.
+        Gravida quis blandit turpis cursus in hac habitasse platea. Nunc sed id
+        semper risus in hendrerit gravida rutrum. Pharetra massa massa ultricies
+        mi quis hendrerit.
+      </p>
+      <p>
+        Tincidunt augue interdum velit euismod in pellentesque massa. Ipsum dolor
+        sit amet consectetur. Varius vel pharetra vel turpis nunc eget. Est
+        ultricies integer quis auctor elit sed vulputate mi. Vel fringilla est
+        ullamcorper eget nulla facilisi etiam dignissim diam. Tellus id interdum
+        velit laoreet id donec ultrices. Tortor dignissim convallis aenean et
+        tortor at risus viverra. In hendrerit gravida rutrum quisque. Vel turpis
+        nunc eget lorem dolor sed viverra ipsum. Nam aliquam sem et tortor
+        consequat id. Gravida rutrum quisque non tellus orci. Blandit volutpat
+        maecenas volutpat blandit aliquam etiam erat velit scelerisque. Viverra
+        accumsan in nisl nisi scelerisque eu. Ultrices neque ornare aenean euismod
+        elementum nisi quis. Ridiculus mus mauris vitae ultricies leo integer
+        malesuada nunc. Rhoncus mattis rhoncus urna neque viverra justo nec
+        ultrices dui. In egestas erat imperdiet sed euismod nisi porta. Eget
+        gravida cum sociis natoque penatibus et magnis dis. Neque sodales ut etiam
+        sit amet nisl purus. Fames ac turpis egestas sed tempus urna et pharetra.
+      </p>
+      <p>
+        Felis donec et odio pellentesque. Arcu non sodales neque sodales ut etiam
+        sit amet. Eget egestas purus viverra accumsan in nisl nisi scelerisque.
+        Risus quis varius quam quisque id diam. Vitae justo eget magna fermentum.
+        In pellentesque massa placerat duis. Urna cursus eget nunc scelerisque.
+        Consequat id porta nibh venenatis cras sed felis eget. Nec tincidunt
+        praesent semper feugiat nibh sed. Eleifend quam adipiscing vitae proin.
+        Cras semper auctor neque vitae tempus quam pellentesque nec. Quis viverra
+        nibh cras pulvinar mattis nunc sed. Ac turpis egestas integer eget aliquet
+        nibh praesent tristique magna. Quis ipsum suspendisse ultrices gravida.
+        Sodales neque sodales ut etiam sit amet nisl. Sed velit dignissim sodales
+        ut. Vel pretium lectus quam id. Augue eget arcu dictum varius duis at
+        consectetur.
+      </p>
+    </div>
+  </div> -->
+{% endblock %}

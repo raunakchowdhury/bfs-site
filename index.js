@@ -1,35 +1,22 @@
 const express = require("express");
 const nunjucks = require("nunjucks");
 const app = express();
-const port = 8081;
+const port = 3000;
 
 // app.set("view engine", "nunjucks");
-
-//for example purposes only
-var EX_user = "Pogchamp";
-var EX_postTitle = "This is a real blog post";
-var EX_postAuthor = "Ahmed Sultan";
-var EX_postDate = "September 9 1999";
+app.use(express.static('static'));
 
 nunjucks.configure("views", {
   autoescape: true,
   express: app
 });
 
-// using stylesheets
-app.use('/static', express.static('static'))
-
 app.get("/", (req, res) => {
-  res.render("index.html", {
-    user: EX_user,
-    postTitle: EX_postTitle,
-    postAuthor: EX_postAuthor,
-    postDate: EX_postDate
-  });
+  res.render("index.html");
 });
 
 app.get("/about", (req, res) => {
-  res.send("Will host our nonprofit cause.");
+  res.send("Will host our nonprofit cause. Will host mission and stuff");
 });
 
 app.get("/team", (req, res) => {
@@ -44,6 +31,17 @@ app.get("/announcements", (req, res) => {
 
 app.get("/blog", (req, res) => {
   res.send("Will show blogs, complete with pictures and stuff.");
+});
+
+app.get("/apply/:position", (req, res) => {
+  let position = req.params.position;
+  if (position == "intern") {
+    res.send("Applying to internship");
+  } else if (position == "mentoring") {
+    res.send("Applying to mentoring program");
+  } else {
+    res.send(`Page for ${req.params.position} does not exist!`);
+  }
 });
 
 app.listen(port, () => console.log(`App running on localhost:${port}`));
