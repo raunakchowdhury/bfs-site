@@ -36,6 +36,9 @@ app.get("/blog", (req, res) => {
 app.get("/apply", (req, res) => {
   res.render("apply.html");
 });
+app.get("/hackathon",(req, res) => {
+	res.render("hackathon.html");
+});
 
 app.get("/apply/:position", (req, res) => {
   let position = req.params.position;
