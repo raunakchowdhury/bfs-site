@@ -33,12 +33,18 @@ app.get("/blog", (req, res) => {
   res.send("Will show blogs, complete with pictures and stuff.");
 });
 
+app.get("/apply", (req, res) => {
+  res.render("apply.html");
+});
+
 app.get("/apply/:position", (req, res) => {
   let position = req.params.position;
   if (position == "intern") {
-    res.send("Applying to internship");
+    res.render("summer-intern.html");
   } else if (position == "mentoring") {
-    res.send("Applying to mentoring program");
+    res.render("mentoring-apply.html");
+  } else if (position == "staff") {
+    res.render("staff.html");
   } else {
     res.send(`Page for ${req.params.position} does not exist!`);
   }
