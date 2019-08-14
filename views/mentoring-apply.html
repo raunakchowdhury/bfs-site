@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div style="margin-left:2%;">
+  <h2 style="margin-top:1%;">Mentorship Program</h2>
+  <p> Click <a href="#">here</a> to learn more about our Mentoring program.</p>
+  <p> Applications for our 2019-2020 Mentoring Program are currently open! Please click the links to learn more! </p>
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#mentor" aria-expanded="false" aria-controls="mentor" style="background-color:#4CBB85; border:none;">
+    Apply as a mentor
+  </button>
+  <div class="collapse" id="mentor">
+    <div class="card card-body">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSelc792CipoPDCtxIIHfbv7I5gnksU1TYOKo039GrPKTNgbNQ/viewform?embedded=true" width="640" height="1495" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div>
+  </div>
+  <br> <br>
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#mentee" aria-expanded="false" aria-controls="mentee" style="background-color:#4CBB85; border:none;">
+    Apply as a mentee
+  </button>
+  <div class="collapse" id="mentee">
+    <div class="card card-body">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd5UhgvF0Usxgaxel5ONVuKPSythI4agrXQvDxdEUDVChQ6HA/viewform?embedded=true" width="700" height="520" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div>
+  </div>
+
+
+{% endblock %}
