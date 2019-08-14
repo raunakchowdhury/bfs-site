@@ -53,6 +53,10 @@ app.get("/apply/:position", (req, res) => {
   }
 });
 
+app.get("/programs", (req, res) => {
+	res.render("programs.html");
+});
+
 app.listen(port, () => console.log(`App running on localhost:${port}`));
 
 app.use((req, res, next) => {
