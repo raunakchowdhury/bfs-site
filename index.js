@@ -54,7 +54,16 @@ app.get("/apply/:position", (req, res) => {
 });
 
 app.get("/mentorship", (req, res) => {
-	res.render("mentorship.html");
+  res.render("mentorship.html");
+});
+
+app.get("/mentorship/:position", (req, res) => {
+  let position = req.params.position;
+  if (position == "apply") {
+    res.render("mentoring-apply.html");
+  } else {
+    res.send(`Page for ${req.params.position} does not exist!`);
+  }
 });
 
 app.get("/summerimmersion", (req, res) => {
