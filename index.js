@@ -53,6 +53,14 @@ app.get("/apply/:position", (req, res) => {
   }
 });
 
+app.get("/mentorship", (req, res) => {
+	res.render("mentorship.html");
+});
+
+app.get("/summerimmersion", (req, res) => {
+	res.render("immersion.html");
+});
+
 app.listen(port, () => console.log(`App running on localhost:${port}`));
 
 app.use((req, res, next) => {
