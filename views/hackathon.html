@@ -1,75 +1,81 @@
-{% extends "base.html" %} {% block content %}
+{% extends "base.html" %}
+{% block content %}
 <div>
-  <div class="text-center">
-      <h2 class="display-4"><b>Blockchains4Hacks 2020</b></h2>
+  <div class="jumbotron jumbotron-fluid text-center align-items-center m-0"
+       style="padding: 10em 0 10em 0; color: white;background: url('hackathon.jpg'); background-size: cover">
+      <h2 class="display-4">Blockchains4Hacks 2020</h2>
       <h4 class="lead">May 30-31, 2020</h4>
     </div>
   </div>
-  <div class="mx-3">
-      <li class="nav-item">
-        <a
-          class="nav-link active"
-          id="about-tab"
-          data-toggle="tab"
-          href="#about"
-          role="tab"
-          aria-selected="true"
-          >About</a
-        >
-      </li>
-      <li class="nav-item">
-        <a
-          class="nav-link"
-          id="sponsors-tab"
-          data-toggle="tab"
-          href="#sponsors"
-          role="tab"
-          aria-selected="false"
-          >Sponsors</a
-        >
-      </li>
-      <li class="nav-item">
-        <a
-          class="nav-link"
-          id="venue-tab"
-          data-toggle="tab"
-          href="#venue"
-          role="tab"
-          aria-selected="false"
-          >Venue</a
-        >
-      </li>
-      <li class="nav-item">
-        <a
-          class="nav-link"
-          id="schedule-tab"
-          data-toggle="tab"
-          href="#schedule"
-          role="tab"
-          aria-selected="false"
-          >Schedule</a
-        >
-      </li>
-      <li class="nav-item">
-	<a class="nav-link" id="support-tab" data-toggle="tab" href="#support" role="tab"  aria-selected="false">Support Our Hackathon</a>
-      </li>
-    </ul>
-    <div class="tab-content">
-      <div
-        class="tab-pane fade show active"
-        id="about"
-        role="tabpanel"
-        aria-labelledby="about-tab"
+<div class="mx-3">
+  <ul class="nav nav-tabs nav-fill" role="tablist">
+    <li class="nav-item">
+      <a
+        class="nav-link active"
+        id="about-tab"
+        data-toggle="tab"
+        href="#about"
+        role="tab"
+        aria-selected="true"
+        >About</a>
+    </li>
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        id="sponsors-tab"
+        data-toggle="tab"
+        href="#sponsors"
+        role="tab"
+        aria-selected="false"
+        >Sponsors</a>
+    </li>
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        id="venue-tab"
+        data-toggle="tab"
+        href="#venue"
+        role="tab"
+        aria-selected="false"
+        >Venue</a>
+    </li>
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        id="schedule-tab"
+        data-toggle="tab"
+        href="#schedule"
+        role="tab"
+        aria-selected="false"
+        >Schedule</a>
+    </li>
+    <li class="nav-item">
+      <a
+	class="nav-link"
+	id="support-tab"
+	data-toggle="tab"
+	href="#support"
+	role="tab"
+	aria-selected="false"
+	>Support Our Hackathon</a>
+    </li>
+  </ul>
+  <div class="tab-content">
+    <div
+      class="tab-pane fade show active"
+      id="about"
+      role="tabpanel"
+      aria-labelledby="about-tab"
       >
-        <div class="container py-5 text-center">
-          <p>
-            Blockchains4Hacks promises to be one of the first hackathons that
-            allows students (both high school and college students) to explore
-            blockchain at an introductory level. We are in negotiations with
-            Microsoft, IBM, JP Morgan, Consensys, Ethereum and Google for
-            sponsorships.
-          </p>
-        </div>
+      <div class="container py-5 text-center">
+        <p>
+          Blockchains4Hacks promises to be one of the first hackathons that
+          allows students (both high school and college students) to explore
+          blockchain at an introductory level. We are in negotiations with
+          Microsoft, IBM, JP Morgan, Consensys, Ethereum and Google for
+          sponsorships.
+        </p>
+      </div>
       </div>
       <div
         class="tab-pane fade"
@@ -79,9 +85,9 @@
       >
         <div class="container py-5 text-center">
           <h3>Sponsors</h3>
-          <div class="row d-flex flex-wrap align-items-center">
+          <div class="mb-5 pb-5 row d-flex flex-wrap align-items-center">
             <div class="col-sm-4 my-3">
-              <a href="http://ethereum.org">
+              <a href="https://ethereum.org">
                 <img src="ethereum-branding.png" alt="ethereum" width="200" />
               </a>
             </div>
@@ -91,7 +97,7 @@
               </a>
             </div>
             <div class="col-sm-4 my-3">
-              <a href="https://hackclub.com/">
+              <a href="https://hackclub.com/bank/">
                 <img src="hack-club-branding.png" alt="hack club" width="200" />
               </a>
             </div>
