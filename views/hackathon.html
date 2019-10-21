@@ -3,8 +3,8 @@
 <div>
   <div class="jumbotron jumbotron-fluid text-center align-items-center m-0"
        style="padding: 10em 0 10em 0; color: white;background: url('/venue-blur.jpg') 0 -10px; background-size: cover;text-shadow: 2px 3px black;">
-      <h2 class="display-4">Blockchains4Hacks 2020</h2>
-      <h4 class="lead">May 30-31, 2020</h4>
+      <h2 class="display-4" style="font-size: 0">Blockchains4Hacks 2020</h2>
+      <h4 class="lead" style="font-size: 0">May 30-31, 2020</h4>
     </div>
   </div>
 <div>
@@ -141,4 +141,13 @@
     </div>
   </div>
 </div>
+
+<!--Adds the fadein animation for the jumbotron text-->
+<script>
+  document.addEventListener("DOMContentLoaded", () =>{
+    let j = $(".jumbotron");
+    j.find(".display-4").animate({"font-size": "3.5rem"}, 700);
+    j.find(".lead").animate({"font-size": "1.5rem"}, 650);
+  });
+</script>
 {% endblock %}
