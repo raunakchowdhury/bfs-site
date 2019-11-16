@@ -144,6 +144,7 @@ h1 {
 /* ----- ABOUT ----- */
 
 .about {
+  text-align: center;
   width: 90%;
   margin: 0 auto;
 }
@@ -152,11 +153,20 @@ h1 {
   width: 100%;
 }
 
+.about h2 {
+  font-family: "Red Hat Display";
+  color: #4cbb85;
+  text-align: center;
+  font-size: 40px;
+  padding-top: 10px;
+  padding-bottom: 0px;
+  margin: 0px;
+  font-weight: 700;
+}
+
 .about p {
   font-family: sans-serif;
-  text-align: center;
   padding: 25px;
-  padding-bottom: 0px;
   margin: 0px;
   font-size: 18px;
 }
