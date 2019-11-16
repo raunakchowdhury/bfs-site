@@ -84,7 +84,7 @@ h1 {
   color: #4cbb85;
   text-align: center;
   font-size: 100px;
-  padding-top: 50px;
+  padding-top: 10px;
   padding-bottom: 0px;
   margin: 0px;
   font-weight: 900;
@@ -129,9 +129,22 @@ h1 {
   text-decoration: none;
 }
 
+
+.carousel-indicators li {
+    height: 13px;
+    width: 13px;
+    margin-left: 7px;
+    margin-right: 7px;
+}
+
+.carousel-indicators .active {
+    background-color: #4cbb85;
+}
+
 /* ----- ABOUT ----- */
 
 .about {
+  text-align: center;
   width: 90%;
   margin: 0 auto;
 }
@@ -140,11 +153,20 @@ h1 {
   width: 100%;
 }
 
+.about h2 {
+  font-family: "Red Hat Display";
+  color: #4cbb85;
+  text-align: center;
+  font-size: 40px;
+  padding-top: 10px;
+  padding-bottom: 0px;
+  margin: 0px;
+  font-weight: 700;
+}
+
 .about p {
   font-family: sans-serif;
-  text-align: center;
   padding: 25px;
-  padding-bottom: 0px;
   margin: 0px;
   font-size: 18px;
 }
@@ -205,6 +227,7 @@ h1 {
 
 .nav-logo {
   max-height: 48px;
+  /*noinspection CssInvalidPropertyValue*/
   max-height: -webkit-fill-available;
 }
 
@@ -234,4 +257,18 @@ h1 {
   --mdc-theme-text-hint-on-dark: rgba(255, 255, 255, 0.5);
   --mdc-theme-text-disabled-on-dark: rgba(255, 255, 255, 0.5);
   --mdc-theme-text-icon-on-dark: rgba(255, 255, 255, 0.5);
+}
+.map-container{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+
+.map-container iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
 }
