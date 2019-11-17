@@ -1,0 +1,18 @@
+{% macro mdcTabItem(icon, title, active = false, props={}) %}
+<button class="mdc-tab {{ 'mdc-tab--active' if active }}"
+        {% for name, value in props %}
+        {{name}}={{value}}
+		{% endfor %}
+>
+	<span class="mdc-tab__content">
+		{% if icon %}
+		<span class="mdc-tab__icon material-icons">{{ icon }}</span>
+		{% endif %}
+		<span class="mdc-tab__text-label">{{ title }}</span>
+	</span>
+	<span class="mdc-tab-indicator {{ 'mdc-tab-indicator--active' if active }}">
+		<span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+	</span>
+	<span class="mdc-tab__ripple"></span>
+</button>
+{% endmacro %}
