@@ -13,12 +13,12 @@
 	<div class="mdc-tab-bar" role="tablist">
 		<div class="mdc-tab-scroller">
 			<div class="mdc-tab-scroller__scroll-area">
-				<div class="mdc-tab-scroller__scroll-content">
-					{{ mdcTabItem("", "About", true, {onClick: "showPanel('#about')"} ) }}
-					{{ mdcTabItem("", "Sponsors", false, {onClick: "showPanel('#sponsors')"} ) }}
-					{{ mdcTabItem("", "Venue", false, {onClick: "showPanel('#venue')"} ) }}
-					{{ mdcTabItem("", "Schedule", false, {onClick: "showPanel('#schedule')"}) }}
-					{{ mdcTabItem("", "Support Our Hackathon", false, {onClick: "showPanel('#support')"}) }}
+				<div class="mdc-tab-scroller__scroll-content tab-items-container">
+					{{ mdcTabItem("", "About", true, {"data-tab": "#about"} ) }}
+					{{ mdcTabItem("", "Sponsors", false, {"data-tab": "#sponsors"} ) }}
+					{{ mdcTabItem("", "Venue", false, {"data-tab": "#venue"} ) }}
+					{{ mdcTabItem("", "Schedule", false, {"data-tab": "#schedule"}) }}
+					{{ mdcTabItem("", "Support Our Hackathon", false, {"data-tab": "#support"}) }}
 				</div>
 			</div>
 		</div>
@@ -125,10 +125,11 @@
 <script>
 	document.addEventListener("DOMContentLoaded", () => {
 		$(".background-card").children().fadeIn(1500);
+
+		$(".tab-items-container").children().on("click", (ev) => {
+			$(".tab-pane").removeClass("active").removeClass("show");
+			$(ev.currentTarget.getAttribute("data-tab")).addClass("show").addClass("active");
+		});
 	});
-	function showPanel(tab){
-		$(".tab-pane").removeClass("active").removeClass("show");
-		$(tab).addClass("show").addClass("active");
-	}
 </script>
 {% endblock %}
