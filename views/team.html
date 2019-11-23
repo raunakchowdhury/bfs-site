@@ -1,0 +1,185 @@
+{% extends "base.html" %}
+{% from "macros/mdcTabItem.njk" import mdcTabItem %}
+
+{% block content %}
+<div>
+  <div class="mdc-card background-card text-center"
+       style="padding: 10em 0 10em 0; color: white;background: url('/stafferteam.jpg') 0 -40px; background-size: cover;text-shadow: 2px 3px black;">
+    <h2 class="display-4" style="display: none">Meet the Team</h2>
+  </div>
+</div>
+<div>
+  <div class="mdc-tab-bar" role="tablist">
+    <div class="mdc-tab-scroller">
+      <div class="mdc-tab-scroller__scroll-area">
+	<div class="mdc-tab-scroller__scroll-content tab-items-container">
+	  {{ mdcTabItem("", "Executives", true, {"data-tab": "#exec"} ) }}
+	  {{ mdcTabItem("", "Hackathon", false, {"data-tab": "#hackathon"} ) }}
+	  {{ mdcTabItem("", "Mentorship Program", false, {"data-tab": "#mentorship"}) }}
+	  {{ mdcTabItem("", "Design", false, {"data-tab": "#design"}) }}
+	  {{ mdcTabItem("", "Web Development", false, {"data-tab": "#webdev"} ) }}
+	</div>
+      </div>
+    </div>
+  </div>
+  <div class="tab-content">
+    <div
+      class="tab-pane fade show active"
+      id="exec"
+      role="tabpanel"
+      aria-labelledby="exec-tab"
+      >
+      <div class="container py-5 text-center">
+	<div class="row">
+	  <div class="col-sm">
+	    <h3 class="m-2">John Doe</h3>
+	    <h4 class="m-2">Founder</h4>
+	    <img class="m-2" src="http://www.twinlakesbiblecamp.org/wp-content/uploads/Headshot-Blank-Person-Circle.gif" width="200"></img>
+	    <p class="m-2">John Doe is a something at something and loves to do some things.</p>
+	  </div>
+	  <div class="col-sm">
+	    <h3 class="m-2">Jane Doe</h3>
+	    <h4 class="m-2">President</h4>
+	    <img class="m-2" src="http://www.twinlakesbiblecamp.org/wp-content/uploads/Headshot-Blank-Person-Circle.gif" width="200"></img>
+	    <p class="m-2">Jane Doe is a something at something and loves to do some things.</p>
+	  </div>
+	  <div class="col-sm">
+	    <h3 class="m-2">Johnny Doe</h3>
+	    <h4 class="m-2">Vice-President</h4>
+	    <img class="m-2" src="http://www.twinlakesbiblecamp.org/wp-content/uploads/Headshot-Blank-Person-Circle.gif" width="200"></img>
+	    <p class="m-2">Johnny Doe is a something at something and loves to do some things.</p>
+	  </div>
+	</div>
+      </div>
+    </div>
+    <div
+      class="tab-pane fade show active"
+      id="hackathon"
+      role="tabpanel"
+      aria-labelledby="hackathon-tab"
+      >
+      <div class="container py-5 text-center">
+	<div class="row">
+	  <div class="col-sm">
+	    <h3 class="m-2">John Doe</h3>
+	    <h4 class="m-2">Founder</h4>
+	    <img class="m-2" src="http://www.twinlakesbiblecamp.org/wp-content/uploads/Headshot-Blank-Person-Circle.gif" width="200"></img>
+	    <p class="m-2">John Doe is a something at something and loves to do some things.</p>
+	  </div>
+	  <div class="col-sm">
+	    <h3 class="m-2">Jane Doe</h3>
+	    <h4 class="m-2">President</h4>
+	    <img class="m-2" src="http://www.twinlakesbiblecamp.org/wp-content/uploads/Headshot-Blank-Person-Circle.gif" width="200"></img>
+	    <p class="m-2">Jane Doe is a something at something and loves to do some things.</p>
+	  </div>
+	  <div class="col-sm">
+	    <h3 class="m-2">Johnny Doe</h3>
+	    <h4 class="m-2">Vice-President</h4>
+	    <img class="m-2" src="http://www.twinlakesbiblecamp.org/wp-content/uploads/Headshot-Blank-Person-Circle.gif" width="200"></img>
+	    <p class="m-2">Johnny Doe is a something at something and loves to do some things.</p>
+	  </div>
+	</div>
+      </div>
+    </div>
+    <div
+      class="tab-pane fade show active"
+      id="mentorship"
+      role="tabpanel"
+      aria-labelledby="mentorship-tab"
+      >
+      <div class="container py-5 text-center">
+	<div class="row">
+	  <div class="col-sm">
+	    <h3 class="m-2">John Doe</h3>
+	    <h4 class="m-2">Founder</h4>
+	    <img class="m-2" src="http://www.twinlakesbiblecamp.org/wp-content/uploads/Headshot-Blank-Person-Circle.gif" width="200"></img>
+	    <p class="m-2">John Doe is a something at something and loves to do some things.</p>
+	  </div>
+	  <div class="col-sm">
+	    <h3 class="m-2">Jane Doe</h3>
+	    <h4 class="m-2">President</h4>
+	    <img class="m-2" src="http://www.twinlakesbiblecamp.org/wp-content/uploads/Headshot-Blank-Person-Circle.gif" width="200"></img>
+	    <p class="m-2">Jane Doe is a something at something and loves to do some things.</p>
+	  </div>
+	  <div class="col-sm">
+	    <h3 class="m-2">Johnny Doe</h3>
+	    <h4 class="m-2">Vice-President</h4>
+	    <img class="m-2" src="http://www.twinlakesbiblecamp.org/wp-content/uploads/Headshot-Blank-Person-Circle.gif" width="200"></img>
+	    <p class="m-2">Johnny Doe is a something at something and loves to do some things.</p>
+	  </div>
+	</div>
+      </div>
+    </div>
+    <div
+      class="tab-pane fade show active"
+      id="design"
+      role="tabpanel"
+      aria-labelledby="design-tab"
+      >
+      <div class="container py-5 text-center">
+	<div class="row">
+	  <div class="col-sm">
+	    <h3 class="m-2">John Doe</h3>
+	    <h4 class="m-2">Founder</h4>
+	    <img class="m-2" src="http://www.twinlakesbiblecamp.org/wp-content/uploads/Headshot-Blank-Person-Circle.gif" width="200"></img>
+	    <p class="m-2">John Doe is a something at something and loves to do some things.</p>
+	  </div>
+	  <div class="col-sm">
+	    <h3 class="m-2">Jane Doe</h3>
+	    <h4 class="m-2">President</h4>
+	    <img class="m-2" src="http://www.twinlakesbiblecamp.org/wp-content/uploads/Headshot-Blank-Person-Circle.gif" width="200"></img>
+	    <p class="m-2">Jane Doe is a something at something and loves to do some things.</p>
+	  </div>
+	  <div class="col-sm">
+	    <h3 class="m-2">Johnny Doe</h3>
+	    <h4 class="m-2">Vice-President</h4>
+	    <img class="m-2" src="http://www.twinlakesbiblecamp.org/wp-content/uploads/Headshot-Blank-Person-Circle.gif" width="200"></img>
+	    <p class="m-2">Johnny Doe is a something at something and loves to do some things.</p>
+	  </div>
+	</div>
+      </div>
+    </div>
+    <div
+      class="tab-pane fade show active"
+      id="webdev"
+      role="tabpanel"
+      aria-labelledby="webdev-tab"
+      >
+      <div class="container py-5 text-center">
+	<div class="row">
+	  <div class="col-sm">
+	    <h3 class="m-2">John Doe</h3>
+	    <h4 class="m-2">Founder</h4>
+	    <img class="m-2" src="http://www.twinlakesbiblecamp.org/wp-content/uploads/Headshot-Blank-Person-Circle.gif" width="200"></img>
+	    <p class="m-2">John Doe is a something at something and loves to do some things.</p>
+	  </div>
+	  <div class="col-sm">
+	    <h3 class="m-2">Jane Doe</h3>
+	    <h4 class="m-2">President</h4>
+	    <img class="m-2" src="http://www.twinlakesbiblecamp.org/wp-content/uploads/Headshot-Blank-Person-Circle.gif" width="200"></img>
+	    <p class="m-2">Jane Doe is a something at something and loves to do some things.</p>
+	  </div>
+	  <div class="col-sm">
+	    <h3 class="m-2">Johnny Doe</h3>
+	    <h4 class="m-2">Vice-President</h4>
+	    <img class="m-2" src="http://www.twinlakesbiblecamp.org/wp-content/uploads/Headshot-Blank-Person-Circle.gif" width="200"></img>
+	    <p class="m-2">Johnny Doe is a something at something and loves to do some things.</p>
+	  </div>
+	</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Adds the fadein animation for the jumbotron text-->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+      $(".background-card").children().fadeIn(1500);
+
+      $(".tab-items-container").children().on("click", (ev) => {
+	  $(".tab-pane").removeClass("active").removeClass("show");
+	  $(ev.currentTarget.getAttribute("data-tab")).addClass("show").addClass("active");
+      });
+  });
+</script>
+{% endblock %}
