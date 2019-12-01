@@ -67,6 +67,15 @@ app.get('/mentorship/:position', (req, res) => {
 	}
 });
 
+app.get('/summerimmersion/:position', (req, res) => {
+	let position = req.params.position;
+	if (position == 'apply') {
+		res.render('summer-intern.html');
+	} else {
+		res.send(`Page for ${req.params.position} does not exist!`);
+	}
+});
+
 app.get('/summerimmersion', (req, res) => {
 	res.render('immersion.html');
 });
