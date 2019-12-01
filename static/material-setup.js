@@ -38,4 +38,5 @@ const drawer = new mdc.drawer.MDCDrawer(document.querySelector(".mdc-drawer"));
 document.querySelector(".mdc-top-app-bar__navigation-icon")
     .addEventListener("click", () => {
         drawer.open = !drawer.open;
-    });
+    })
+
