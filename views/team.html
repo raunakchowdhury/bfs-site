@@ -1,0 +1,202 @@
+{% extends "base.html" %}
+{% from "macros/mdcTabItem.njk" import mdcTabItem %}
+
+{% block content %}
+<div>
+  <div class="mdc-card background-card text-center"
+       style="padding: 10em 0 10em 0; color: white;background: url('/stafferteam.jpg') 0 -40px; background-size: cover;text-shadow: 2px 3px black;">
+    <h2 class="display-4" style="display: none">Meet the Team</h2>
+  </div>
+</div>
+<div>
+  <div class="mdc-tab-bar" role="tablist">
+    <div class="mdc-tab-scroller">
+      <div class="mdc-tab-scroller__scroll-area">
+	<div class="mdc-tab-scroller__scroll-content tab-items-container">
+	  {{ mdcTabItem("", "Executives", true, {"data-tab": "#exec"} ) }}
+	  {{ mdcTabItem("", "Hackathon", false, {"data-tab": "#hackathon"} ) }}
+	  {{ mdcTabItem("", "Mentorship Program", false, {"data-tab": "#mentorship"}) }}
+	  {{ mdcTabItem("", "Design", false, {"data-tab": "#design"}) }}
+	  {{ mdcTabItem("", "Web Development", false, {"data-tab": "#webdev"} ) }}
+	  {{ mdcTabItem("", "Outreach", false, {"data-tab": "#outreach"} ) }}
+	</div>
+      </div>
+    </div>
+  </div>
+  <div class="tab-content">
+    <div
+      class="tab-pane fade show active"
+      id="exec"
+      role="tabpanel"
+      aria-labelledby="exec-tab"
+      >
+      <div class="container py-5 text-center">
+	<div class="row">
+	  <div class="col-sm">
+	    <h3 class="m-2">Raunak Chowdhury</h3>
+	    <h4 class="m-2">Founder</h4>
+	    <img class="m-2" src="/team/raunak_pic.jpeg" width="200"></img>
+	    <p class="m-2">Raunak is a freshman at MIT, intending to major in Computer Science and minor in Business Management. He is extremely passionate about the benefits of technology when it is applied to society, as well as democratizing access to tech; to that end, he founded BlockchainsForSchools in July 2018 to spread awareness of blockchain technology after witnessing the generation gap in the blockchain industry in an internship at a blockchain company he had that summer. In his free time, he loves socializing with and meeting people, whether they be friends or new acquaintances, playing Smash or badminton, or working on pet projects.</p>
+	    <p class="m-2">Fun Fact: Raunak was supposed to be born in 2002, but was born a week early and was born in 2001!</p>
+	    <a href="mailto:raunak@blockchainsforschools.org">raunak@blockchainsforschools.org</a><br>
+            <a href="https://www.linkedin.com/in/raunak-chowdhury/" class="fa fa-linkedin fa-2x"></a>
+            <a href="https://github.com/raunakchowdhury" class="fa fa-github fa-2x"></a>
+	  </div>
+	  <div class="col-sm">
+	    <h3 class="m-2">Victor Kuang</h3>
+	    <h4 class="m-2">Co-President</h4>
+	    <img class="m-2" src="/team/victor_pic.jpg" width="200"></img>
+	    <p class="m-2">Victor Kuang is a senior at Stuyvesant High School. Victor has a diverse group of interests, such as physics, guitars, and satirical writing. He got his start with blockchain technology after exploring his interest in cryptocurrency. He then joined the 2018-2019 cohort of BlockchainsForSchools to expand his knowledge even further. Currently, Victor helps lead all New York City events in the mentoring department, planning each monthly session of the program.</p>
+	    <p class="m-2">Fun Fact: PINEAPPLE PIZZA IS OK!!!!!</p>
+	    <a href="mailto:victor@blockchainsforschools.org">victor@blockchainsforschools.org</a><br>
+            <a href="https://www.linkedin.com/in/victor-kuang-255102148/" class="fa fa-linkedin fa-2x"></a>
+	  </div>
+	  <div class="col-sm">
+	    <h3 class="m-2">Rubin Peci</h3>
+	    <h4 class="m-2">Vice President/Treasurer</h4>
+	    <img class="m-2" src="/team/rubin_pic.jpg" width="200"></img>
+	    <p class="m-2">Rubin is a freshman at New York University, currently double majoring in Computer Science and Economics. He has been involved in the blockchain space for over 3 years and is extremely passionate about computer science, and the applications it has to the finance industry. Rubin was initially a mentee for BlockchainsForSchools, but became involved in helping the company grow and develop. He also manages the finances for BlockchainsForSchools. In his free time, Rubin enjoys lacrosse, reading, and socializing.</p>
+	    <p class="m-2">Fun Fact: Rubin is Albanian.</p>
+	    <a href="mailto:raunak@blockchainsforschools.org">rubinpeci@gmail.com</a><br>
+            <a href="www.linkedin.com/in/rubin-peci" class="fa fa-linkedin fa-2x"></a>
+            <a href="https://github.com/LargeLlama" class="fa fa-github fa-2x"></a>
+	  </div>
+	</div>
+      </div>
+    </div>
+    <div
+      class="tab-pane fade"
+      id="hackathon"
+      role="tabpanel"
+      aria-labelledby="hackathon-tab"
+      >
+      <div class="container py-5 text-center">
+	<div class="row">
+	  <div class="col-sm">
+	    <h3 class="m-2">Matthew Bilik</h3>
+	    <h4 class="m-2">Hackathon Sponsorship Director & Web Dev Department Head</h4>
+	    <img class="m-2" src="/team/matthew_pic.jpg" width="200"></img>
+	    <p class="m-2">Matthew is a junior at Brooklyn Technical High School in Fort Greene. He have extensive experience organizing events, hosting three hackathons with a total attendance of over 300 persons. In doing so, he has worked with companies such as Microsoft, Google, and Bloomberg, establishing strong relationships with corporate sponsors. He currently leads hackathon sponsorship efforts at BFS and is the Web Dev department head along with Raunak. When he is not working on BFS or my own computer science nonprofit, you can find him working on his research, programming, or chilling with friends!</p>
+	    <p class="m-2">Fun Fact: Matthew in the midst of starting a band and listens to a lot of indie music!</p>
+	    <a href="mailto:mbilik0726@bths.edu">mbilik0726@bths.edu</a><br>
+            <a href="https://www.linkedin.com/in/matthewbilik" class="fa fa-linkedin fa-2x"></a>
+            <a href="https://github.com/mattbilik" class="fa fa-github fa-2x"></a>
+	  </div>
+	  <div class="col-sm">
+	    <h3 class="m-2">Jeffrey Yu</h3>
+	    <h4 class="m-2">Hackathon & Logistics Lead</h4>
+	    <img class="m-2" src="/team/jeffrey_pic.png" width="200"></img>
+	    <p class="m-2">Jeffrey is currently a student at the University of Pennsylvania studying Economics and Computer Science. He has been organizing hackathons for over four years now and is the founder of TeenHacks LI. He believes hackathons provide a unique environment to experiment in computer science that is vital for capturing the interests of students from all fields. He is excited to be helping plan Blockchains for Hacks and be a part of this amazing team.</p>
+	    <p class="m-2">Fun Fact: Jeffrey has never had Fiji water.</p>
+	    <a href="mailto:jeffrey@blockchainsforschools.org">jeffrey@blockchainsforschools.org</a><br>
+            <a href="https://www.linkedin.com/in/jeffreyyu101/" class="fa fa-linkedin fa-2x"></a>
+            <a href="https://github.com/jeffreyyu101" class="fa fa-github fa-2x"></a>
+	  </div>
+	</div>
+      </div>
+    </div>
+    <div
+      class="tab-pane fade"
+      id="mentorship"
+      role="tabpanel"
+      aria-labelledby="mentorship-tab"
+      >
+      <div class="container py-5 text-center">
+	<div class="row">
+	  <div class="col-sm">
+	    <h3 class="m-2">Brandon Nydick</h3>
+	    <h4 class="m-2">Mentorship Program Staffer</h4>
+	    <img class="m-2" src="/team/brandon_pic.jpg" width="200"></img>
+	    <p class="m-2">Brandon has been a competitive chess player since he was six years old. He also plays a lot of tennis and loves to surf. His favorite subjects are History and English. At BFS, he works as a staffer in the Mentorship Program, helping to organize educational events that connect high-school students to professionals in the blockchain industry. </p>
+	    <p class="m-2">Fun Fact: Brandon was born in Hong Kong.</p>
+	    <a href="mailto:brandon@blockchainsforschools.org">brandon@blockchainsforschools.org</a><br>
+            <a href="https://www.linkedin.com/in/brandon-nydick-9346b6198/" class="fa fa-linkedin fa-2x"></a>
+	  </div>
+	</div>
+      </div>
+    </div>
+    <div
+      class="tab-pane fade"
+      id="design"
+      role="tabpanel"
+      aria-labelledby="design-tab"
+      >
+      <div class="container py-5 text-center">
+	<div class="row">
+	  <div class="col-sm">
+	    <h3 class="m-2">Ahmed Sultan</h3>
+	    <h4 class="m-2">Head of Design</h4>
+	    <img class="m-2" src="/team/ahmed_pic.jpg" width="200"></img>
+	    <p class="m-2">Ahmed has a wide variety of interests—ranging from computer science and technology, to finance and economics, to design and even international relations—but joined the Blockchains For Schools family in order to learn more about blockchain technology, which he feels is a field with so much potential. Currently serving as the Head of Design for BFS, Ahmed is eager to continue working and learning more about blockchain while helping the organization grow. Outside of BFS, Ahmed is the Secretary-General of his school's Model UN team, an editor for the school newspaper, and a director for StuyHacks.</p>
+	    <p class="m-2">Fun Fact: Ahmed plays Super Smash Bros. Ultimate competitively.</p>
+	    <a href="mailto:asultan00@stuy.edu">asultan00@stuy.edu</a><br>
+            <a href="https://www.linkedin.com/in/ahmedksultan/" class="fa fa-linkedin fa-2x"></a>
+            <a href="https://github.com/ahmedksultan" class="fa fa-github fa-2x"></a>
+	  </div>
+	</div>
+      </div>
+    </div>
+    <div
+      class="tab-pane fade"
+      id="webdev"
+      role="tabpanel"
+      aria-labelledby="webdev-tab"
+      >
+      <div class="container py-5 text-center">
+	<div class="row">
+	  <div class="col-sm">
+	    <h3 class="m-2">Kazi Jamal</h3>
+	    <h4 class="m-2">Web Development Team Member</h4>
+	    <img class="m-2" src="/team/kazi_pic.jpg" width="200"></img>
+	    <p class="m-2">Kazi is a high school senior that is passionate about computer science. He loves programming, software development, and web development. Along with software, he am interested in computer hardware, so he build and repair computers as a hobby. He also enjoy graphic design and video editing. At BFS, he is a part of the web development team and helps to design and develop the website.</p>
+	    <p class="m-2">Fun Fact: Kazi loves retro video games, and owns an Atomic Purple Game Boy Color.</p>
+	    <a href="mailto:kazi@blockchainsforschools.org">kazi@blockchainsforschools.org</a><br>
+            <a href="https://www.linkedin.com/in/kazi-jamal-4b13b618a/" class="fa fa-linkedin fa-2x"></a>
+            <a href="https://github.com/kazijamal" class="fa fa-github fa-2x"></a>
+	  </div>
+	</div>
+      </div>
+    </div>
+    <div
+      class="tab-pane fade"
+      id="outreach"
+      role="tabpanel"
+      aria-labelledby="outreach-tab"
+      >
+      <div class="container py-5 text-center">
+	<div class="row">
+	  <div class="col-sm">
+	    <h3 class="m-2">Lin Zhang</h3>
+	    <h4 class="m-2">Outreach Member</h4>
+	    <img class="m-2" src="/team/lin_pic.jpg" width="200"></img>
+	    <p class="m-2">Lin is a Cellular & Molecular Biology major on the pre-med track. She is a part of the outreach division at BFS responsible for contacting other schools/organizations and recruiting new members to the program. </p>
+	    <p class="m-2">Fun Fact: Lin's favorite food is potatoes, in any shape or form.</p>
+	    <a href="mailto:zhang.lin6@husky.neu.edu">zhang.lin6@husky.neu.edu</a><br>
+            <a href="https://www.linkedin.com/in/lin-zhang-546459176" class="fa fa-linkedin fa-2x"></a>
+	  </div>
+	  <div class="col-sm">
+	    <h3 class="m-2">Harry Li</h3>
+	    <h4 class="m-2">Outreach Staffer</h4>
+	    <img class="m-2" src="/team/harry_pic.jpeg" width="200"></img>
+	    <p class="m-2">Is our imagination the only limitation to technology? Or is it the other way around? That is the question Harry wants to answer.</p>
+	    <p class="m-2">Fun Fact: Harry has 20 dogs.</p>
+	    <a href="mailto:hli@whschool.org">hli@whschool.org</a><br>
+	  </div>
+	</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Adds the fadein animation for the jumbotron text-->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+      $(".background-card").children().fadeIn(1500);
+
+      $(".tab-items-container").children().on("click", (ev) => {
+	  $(".tab-pane").removeClass("active").removeClass("show");
+	  $(ev.currentTarget.getAttribute("data-tab")).addClass("show").addClass("active");
+      });
+  });
+</script>
+{% endblock %}

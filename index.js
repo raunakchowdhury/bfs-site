@@ -20,9 +20,10 @@ app.get('/about', (req, res) => {
 });
 
 app.get('/team', (req, res) => {
-	res.send(
-		'Will show all team members. Execs first, followed by members. Potential React use here'
-	);
+    // res.send(
+    //	'Will show all team members. Execs first, followed by members. Potential React use here'
+    // );
+    res.render('team.html');
 });
 
 app.get('/announcements', (req, res) => {
