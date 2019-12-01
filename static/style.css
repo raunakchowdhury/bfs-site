@@ -292,3 +292,7 @@ h1 {
 .supporters-tab img {
     margin: 0 15px;
 }
+
+button:focus {
+    outline: none;
+}
