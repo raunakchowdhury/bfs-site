@@ -305,6 +305,9 @@ h1 {
 
 .mdc-drawer__header {
     background-color: #4cbb85;
+    padding-top: 8px;
+    padding-bottom: 9px;
+    text-align: center;
 }
 
 .supporters-tab img {
@@ -313,4 +316,10 @@ h1 {
 
 button:focus {
     outline: none;
+}
+
+#sidebar-nav-logo {
+    width: 120px;
+    height: 48px;
+    display: inline-block;
 }
