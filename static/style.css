@@ -323,6 +323,10 @@ h1 {
 	text-align: center;
 }
 
+.mdc-drawer--modal {
+    border: none;
+}
+
 .supporters-tab img {
 	margin: 0 15px;
 }
