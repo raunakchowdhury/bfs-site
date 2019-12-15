@@ -317,15 +317,6 @@ h1 {
 }
 
 .mdc-drawer__header {
-    background-color: #4cbb85;
-    padding-top: 8px;
-    padding-bottom: 9px;
-    text-align: center;
-    width: auto;
-}
-
-.mdc-drawer--modal {
-    border-right: 0px;
 	background-color: #4cbb85;
 	padding-top: 8px;
 	padding-bottom: 9px;
