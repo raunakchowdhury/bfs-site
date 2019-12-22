@@ -26,6 +26,7 @@
 	</div>
 	<div class="mdc-layout-grid">
 		<div class="tab-content">
+			<p class="text-center">Click/Hover on a card to see that person's description</p>
 			<div class="tab-pane fade show active"
 			     id="exec"
 			     role="tabpanel"
@@ -33,6 +34,16 @@
 			>
 				<div class="mdc-layout-grid__inner">
 					{% include "./teamTabs/exec.njk" %}
+				</div>
+			</div>
+
+			<div class="tab-pane fade"
+			     id="hackathon"
+			     role="tabpanel"
+			     aria-labelledby="exec-tab"
+			>
+				<div class="mdc-layout-grid__inner">
+					{% include "./teamTabs/hackathon.njk" %}
 				</div>
 			</div>
 		</div>
@@ -47,6 +58,12 @@
 		$(".tab-items-container").children().on("click", (ev) => {
 			$(".tab-pane").removeClass("active").removeClass("show");
 			$(ev.currentTarget.getAttribute("data-tab")).addClass("show").addClass("active");
+		});
+
+		$(".team-member").on("mouseenter", ev => {
+			$(ev.currentTarget).find(".description").fadeIn();
+		}).on("mouseleave", ev => {
+			$(ev.currentTarget).find(".description").fadeOut();
 		});
 	});
 </script>

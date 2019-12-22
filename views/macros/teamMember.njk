@@ -1,9 +1,9 @@
-{% macro teamMember(image, name, position, description, fun_fact, social) %}
-<div class="mdc-layout-grid__cell--span-4">
+{% macro teamMember(image, name, position, school, description, fun_fact, social, bg_pos = "center") %}
+<div class="mdc-layout-grid__cell--span-4 team-member">
 	<div class="mdc-card mdc-card--outlined">
 		<div class="mdc-card__primary-action">
-			<div class="mdc-card__media mdc-card__media--16-9"
-			     style="background-image: url('{{ image }}');"></div>
+			<div class="mdc-card__media mdc-card__media--square"
+			     style="background-image: url('{{ image }}');max-height: 370px;background-position: {{bg_pos}};"></div>
 			<div style="padding: 10px">
 				<h2 class="mdc-typography mdc-typography--headline6">
 					{{ name }}
@@ -11,8 +11,11 @@
 				<h3 class="mdc-typography mdc-typography--subtitle2">
 					{{ position }}
 				</h3>
+				<h3 class="mdc-typography mdc-typography--subtitle2">
+					{{ school }}
+				</h3>
 			</div>
-			<div class="mdc-typography mdc-typography--body2" style="padding: 10px">
+			<div class="mdc-typography mdc-typography--body2 description" style="padding: 10px; display: none;">
 				{{ description }}
 			</div>
 			<div class="mdc-typography mdc-typography--body2" style="padding: 10px">
