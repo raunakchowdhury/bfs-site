@@ -360,3 +360,7 @@ button:focus {
 	position: absolute;
 	bottom: 0;
 }
+
+#supporters {
+	margin-top: 40px;
+}
