@@ -348,3 +348,19 @@ button:focus {
 .carousel-indicators {
 	z-index: 1;
 }
+
+.homepageTable {
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom: 20px;
+	position: relative;
+}
+
+.button {
+	position: absolute;
+	bottom: 0;
+}
+
+#supporters {
+	margin-top: 40px;
+}
