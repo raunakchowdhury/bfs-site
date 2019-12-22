@@ -340,3 +340,11 @@ button:focus {
 	height: 48px;
 	display: inline-block;
 }
+
+.mdc-top-app-bar__row {
+	z-index: 2;
+}
+
+.carousel-indicators {
+	z-index: 1;
+}
