@@ -183,8 +183,7 @@ h1 {
 
 .about {
 	text-align: center;
-	width: 90%;
-	margin: 0 auto;
+	padding: 40px;
 }
 
 .about hr {
@@ -354,11 +353,6 @@ button:focus {
 	margin-top: 30px;
 	margin-bottom: 20px;
 	position: relative;
-}
-
-.button {
-	position: absolute;
-	bottom: 0;
 }
 
 #supporters {
