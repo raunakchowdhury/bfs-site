@@ -1,39 +1,41 @@
-{% extends "base.html" %}
-
-{% block content %}
+{% extends "base.html" %} {% block content %}
 
 <div>
-	<div class="jumbotron jumbotron-fluid text-center align-items-center m-0"
-	     style="text-align:center; padding: 10em 0 10em 0; color: white;background: url('/mentorship.jpg') 0 -100px; background-size: cover;text-shadow: 2px 3px black;">
+	<div
+		class="jumbotron jumbotron-fluid text-center align-items-center m-0"
+		style="text-align:center; padding: 10em 0 10em 0; color: white;background: url('/mentorship.jpg') 0 -100px; background-size: cover;text-shadow: 2px 3px black;"
+	>
 		<h2 class="display-4" style="display: none;">Mentorship Program</h2>
 		<h4 class="lead" style="display: none; font-size: 2rem;">Sept-June 2020</h4>
 	</div>
 </div>
 
 <div style="margin-left:2%; margin-bottom: 4%;">
-	<h2 style="margin-left:2%;">
-		<h2 style="margin-top:2%">Mentorship Program</h2>
-		<p> Our mentoring program: running September-May, the BFS Mentoring Program connects high schoolers with mentors
-			in
-			the space. These mentors consist of software engineers, business executives, researchers, and investors who
-			are
-			actively working within blockchain industry at companies like Google, McKinsey, Goldman Sachs, JP Morgan,
-			Yahoo,
-			Forbes, Ethereum, Consensys, Livepeer, and ThoughtWorks. We started our first mentoring sessions in
-			September
-			with 100 people, and these sessions will continue throughout the school year. Our first iteration of the
-			mentoring ended with 180 participants (100 mentees, 80 mentors). We received $1,200 in grants from the
-			Ethereum
-			Community Fund to fund these sessions.
-		</p>
-		<h3 style="margin-top:1%;">Interested in applying as a mentor or mentee? Go <a href="/mentorship/apply">here</a>
-			to
-			apply</h3>
+	<h2 style="margin-top:2%">Mentorship Program</h2>
+	<p>
+		Our mentoring program: running September-May, the BFS Mentoring Program
+		connects high schoolers with mentors in the space. These mentors consist of
+		software engineers, business executives, researchers, and investors who are
+		actively working within blockchain industry at companies like Google,
+		McKinsey, Goldman Sachs, JP Morgan, Yahoo, Forbes, Ethereum, Consensys,
+		Livepeer, and ThoughtWorks. We started our first mentoring sessions in
+		September with 100 people, and these sessions will continue throughout the
+		school year. Our first iteration of the mentoring ended with 180
+		participants (100 mentees, 80 mentors). We received $1,200 in grants from
+		the Ethereum Community Fund to fund these sessions.
+	</p>
+	<h3 style="margin-top:1%;">
+		Interested in applying as a mentor or mentee? Go
+		<a href="/mentorship/apply">here</a> to apply
+	</h3>
 </div>
+
 <!--Adds the fadein animation for the jumbotron text-->
 <script>
-	document.addEventListener("DOMContentLoaded", () => {
-		$(".jumbotron").children().fadeIn(1500);
+	document.addEventListener('DOMContentLoaded', () => {
+		$('.jumbotron')
+			.children()
+			.fadeIn(1500);
 	});
 </script>
 {% endblock %}
