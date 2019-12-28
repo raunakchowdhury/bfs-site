@@ -11,7 +11,7 @@
 ----- COLORS ----- */
 
 html {
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 /* ----- BODY ----- */
@@ -361,4 +361,23 @@ button:focus {
 
 #supporters {
   margin-top: 40px;
+}
+
+#summer-immersion-cover-picture {
+  padding: 10em 0 10em 0;
+  color: white;
+  background: url("/summerimmersion.jpg") 0 -180px;
+  background-size: cover;
+  text-shadow: 2px 3px black;
+  background-attachment: fixed;
+}
+
+#mentorship-cover-picture {
+  text-align: center;
+  padding: 10em 0 10em 0;
+  color: white;
+  background: url("/mentorship.jpg") 0 -100px;
+  background-size: cover;
+  text-shadow: 2px 3px black;
+  background-attachment: fixed;
 }
