@@ -401,7 +401,7 @@ button:focus {
   padding: 10em 0 10em 0;
   color: white;
   background: url("/stafferteam.jpg") 0 -40px;
-  background-size: cover;
+  background-size: 110% 110%;
   text-shadow: 2px 3px black;
   background-repeat: no-repeat;
   background-attachment: fixed;
