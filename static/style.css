@@ -369,7 +369,9 @@ button:focus {
   background: url("/summerimmersion.jpg") 0 -180px;
   background-size: cover;
   text-shadow: 2px 3px black;
+  background-repeat: no-repeat;
   background-attachment: fixed;
+  height: 100vh;
 }
 
 #mentorship-cover-picture {
@@ -377,7 +379,42 @@ button:focus {
   padding: 10em 0 10em 0;
   color: white;
   background: url("/mentorship.jpg") 0 -100px;
+  background-size: 130% 140%;
+  text-shadow: 2px 3px black;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+#hackathon-cover-picture {
+  padding: 10em 0 10em 0;
+  color: white;
+  background: url("/venue-blur-dark.jpg") 0 -40px;
+  background-size: cover;
+  text-shadow: 2px 3px black;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+#team-cover-picture {
+  padding: 10em 0 10em 0;
+  color: white;
+  background: url("/stafferteam.jpg") 0 -40px;
+  background-size: cover;
+  text-shadow: 2px 3px black;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+#apply-cover-picture {
+  text-align: center;
+  padding: 10em 0 10em 0;
+  color: white;
+  background: url("/stafferteam-dark.png") 0 -100px;
   background-size: cover;
   text-shadow: 2px 3px black;
   background-attachment: fixed;
+  height: 100vh;
 }

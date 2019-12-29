@@ -4,7 +4,7 @@
 {% block content %}
 <div>
 	<div class="mdc-card background-card text-center"
-	     style="padding: 10em 0 10em 0; color: white;background: url('/venue-blur-dark.jpg') 0 -40px; background-size: cover;text-shadow: 2px 3px black;">
+		id="hackathon-cover-picture">
 		<h2 class="display-4" style="display: none">Blockchains4Hacks 2020</h2>
 		<h4 class="lead" style="display: none; font-size: 2rem;">May 30-31, 2020</h4>
 	</div>
@@ -136,5 +136,14 @@
 			$(ev.currentTarget.getAttribute("data-tab")).addClass("show").addClass("active");
 		});
 	});
+
+	var bg = $("#team-cover-picture");
+
+	function resizeBackground() {
+		bg.height($(window).height() + 60);
+	}
+
+	$(window).resize(resizeBackground);
+	resizeBackground();
 </script>
 {% endblock %}
