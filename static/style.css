@@ -371,7 +371,7 @@ button:focus {
   text-shadow: 2px 3px black;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 #mentorship-cover-picture {
@@ -379,33 +379,33 @@ button:focus {
   padding: 10em 0 10em 0;
   color: white;
   background: url("/mentorship.jpg") 0 -100px;
-  background-size: 130% 140%;
+  background-size: cover;
   text-shadow: 2px 3px black;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  height: 100vh;
+  /* background-attachment: fixed; */
+  /* height: 100vh; */
 }
 
 #hackathon-cover-picture {
   padding: 10em 0 10em 0;
   color: white;
   background: url("/venue-blur-dark.jpg") 0 -40px;
-  background-size: 100% 106%;
+  background-size: cover;
   text-shadow: 2px 3px black;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 #team-cover-picture {
   padding: 10em 0 10em 0;
   color: white;
   background: url("/stafferteam.jpg") 0 -40px;
-  background-size: 110% 110%;
+  background-size: cover;
   text-shadow: 2px 3px black;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  height: 100vh;
+  /* background-attachment: fixed; */
+  /* height: 100vh; */
 }
 
 #apply-cover-picture {
@@ -416,5 +416,5 @@ button:focus {
   background-size: cover;
   text-shadow: 2px 3px black;
   background-attachment: fixed;
-  height: 100vh;
+  /* height: 100vh; */
 }
