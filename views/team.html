@@ -2,7 +2,7 @@
 {% from "./macros/teamMember.njk" import teamMember %} {% block content %}
 
 <div class="mdc-card background-card text-center" id="team-cover-picture">
-  <h2 class="display-4" style="display: none">Meet the Team</h2>
+	<h2 class="display-4" style="display: none">Meet the Team</h2>
 </div>
 
 <div>
@@ -10,69 +10,53 @@
 		<div class="mdc-tab-scroller">
 			<div class="mdc-tab-scroller__scroll-area">
 				<div class="mdc-tab-scroller__scroll-content tab-items-container">
-					{{ mdcTabItem("", "Executives", true, {"data-tab": "#exec"} ) }}
-					{{ mdcTabItem("", "Hackathon", false, {"data-tab": "#hackathon"} ) }}
-					{{ mdcTabItem("", "Mentorship Program", false, {"data-tab": "#mentorship"}) }}
-					{{ mdcTabItem("", "Design", false, {"data-tab": "#design"}) }}
-					{{ mdcTabItem("", "Web Development", false, {"data-tab": "#webdev"} ) }}
-					{{ mdcTabItem("", "Outreach", false, {"data-tab": "#outreach"} ) }}
+					{{ mdcTabItem("", "Executives", true, {"data-tab": "#exec"} ) }} {{
+					mdcTabItem("", "Hackathon", false, {"data-tab": "#hackathon"} ) }} {{
+					mdcTabItem("", "Mentorship Program", false, {"data-tab":
+					"#mentorship"}) }} {{ mdcTabItem("", "Design", false, {"data-tab":
+					"#design"}) }} {{ mdcTabItem("", "Web Development", false,
+					{"data-tab": "#webdev"} ) }} {{ mdcTabItem("", "Outreach", false,
+					{"data-tab": "#outreach"} ) }}
 				</div>
 			</div>
 		</div>
 	</div>
 	<div class="mdc-layout-grid">
 		<div class="tab-content">
-			<p class="text-center">Click/Hover on a card to see that person's description</p>
-			<div class="tab-pane fade show active"
-			     id="exec"
-			     role="tabpanel"
-			>
+			<p class="text-center">
+				Click/Hover on a card to see that person's description
+			</p>
+			<div class="tab-pane fade show active" id="exec" role="tabpanel">
 				<div class="mdc-layout-grid__inner">
 					{% include "./teamTabs/exec.njk" %}
 				</div>
 			</div>
 
-			<div class="tab-pane fade"
-			     id="hackathon"
-			     role="tabpanel"
-			>
+			<div class="tab-pane fade" id="hackathon" role="tabpanel">
 				<div class="mdc-layout-grid__inner">
 					{% include "./teamTabs/hackathon.njk" %}
 				</div>
 			</div>
 
-			<div class="tab-pane fade"
-			     id="mentorship"
-			     role="tabpanel"
-			>
+			<div class="tab-pane fade" id="mentorship" role="tabpanel">
 				<div class="mdc-layout-grid__inner">
 					{% include "./teamTabs/mentorship.njk" %}
 				</div>
 			</div>
 
-
-			<div class="tab-pane fade"
-			     id="design"
-			     role="tabpanel"
-			>
+			<div class="tab-pane fade" id="design" role="tabpanel">
 				<div class="mdc-layout-grid__inner">
 					{% include "./teamTabs/design.njk" %}
 				</div>
 			</div>
 
-			<div class="tab-pane fade"
-			     id="webdev"
-			     role="tabpanel"
-			>
+			<div class="tab-pane fade" id="webdev" role="tabpanel">
 				<div class="mdc-layout-grid__inner">
 					{% include "./teamTabs/webdev.njk" %}
 				</div>
 			</div>
 
-			<div class="tab-pane fade"
-			     id="outreach"
-			     role="tabpanel"
-			>
+			<div class="tab-pane fade" id="outreach" role="tabpanel">
 				<div class="mdc-layout-grid__inner">
 					{% include "./teamTabs/outreach.njk" %}
 				</div>
@@ -83,41 +67,41 @@
 
 <!--Adds the fadein animation for the jumbotron text-->
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    $(".background-card")
-      .children()
-      .fadeIn(1500);
+	document.addEventListener('DOMContentLoaded', () => {
+		$('.background-card')
+			.children()
+			.fadeIn(1500);
 
-    $(".tab-items-container")
-      .children()
-      .on("click", ev => {
-        $(".tab-pane")
-          .removeClass("active")
-          .removeClass("show");
-        $(ev.currentTarget.getAttribute("data-tab"))
-          .addClass("show")
-          .addClass("active");
-      });
+		$('.tab-items-container')
+			.children()
+			.on('click', ev => {
+				$('.tab-pane')
+					.removeClass('active')
+					.removeClass('show');
+				$(ev.currentTarget.getAttribute('data-tab'))
+					.addClass('show')
+					.addClass('active');
+			});
 
-    $(".team-member")
-      .on("mouseenter", ev => {
-        $(ev.currentTarget)
-          .find(".description")
-          .fadeIn();
-      })
-      .on("mouseleave", ev => {
-        $(ev.currentTarget)
-          .find(".description")
-          .fadeOut();
-      });
-  });
-  var bg = $("#team-cover-picture");
+		$('.team-member')
+			.on('mouseenter', ev => {
+				$(ev.currentTarget)
+					.find('.description')
+					.fadeIn();
+			})
+			.on('mouseleave', ev => {
+				$(ev.currentTarget)
+					.find('.description')
+					.fadeOut();
+			});
+	});
+	var bg = $('#team-cover-picture');
 
-  function resizeBackground() {
-    bg.height($(window).height() + 60);
-  }
+	function resizeBackground() {
+		bg.height($(window).height() + 60);
+	}
 
-  $(window).resize(resizeBackground);
-  resizeBackground();
+	$(window).resize(resizeBackground);
+	resizeBackground();
 </script>
 {% endblock %}
