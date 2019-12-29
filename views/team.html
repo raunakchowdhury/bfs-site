@@ -1,15 +1,12 @@
-{% extends "base.html" %}
-{% from "./macros/mdcTabItem.njk" import mdcTabItem %}
-{% from "./macros/teamMember.njk" import teamMember %}
+{% extends "base.html" %} {% from "./macros/mdcTabItem.njk" import mdcTabItem %}
+{% from "./macros/teamMember.njk" import teamMember %} {% block content %}
 
-{% block content %}
-<div>
-	<div class="mdc-card background-card text-center"
-	     style="padding: 10em 0 10em 0; color: white;background: url('/stafferteam.jpg') 0 -40px; background-size: cover;text-shadow: 2px 3px black;">
-		<h2 class="display-4" style="display: none">Meet the Team</h2>
-	</div>
+<div class="mdc-card background-card text-center" id="team-cover-picture">
+  <h2 class="display-4" style="display: none">Meet the Team</h2>
 </div>
+
 <div>
+<<<<<<< HEAD
 	<div class="mdc-tab-bar" role="tablist">
 		<div class="mdc-tab-scroller">
 			<div class="mdc-tab-scroller__scroll-area">
@@ -87,19 +84,41 @@
 
 <!--Adds the fadein animation for the jumbotron text-->
 <script>
-	document.addEventListener("DOMContentLoaded", () => {
-		$(".background-card").children().fadeIn(1500);
+  document.addEventListener("DOMContentLoaded", () => {
+    $(".background-card")
+      .children()
+      .fadeIn(1500);
 
-		$(".tab-items-container").children().on("click", (ev) => {
-			$(".tab-pane").removeClass("active").removeClass("show");
-			$(ev.currentTarget.getAttribute("data-tab")).addClass("show").addClass("active");
-		});
+    $(".tab-items-container")
+      .children()
+      .on("click", ev => {
+        $(".tab-pane")
+          .removeClass("active")
+          .removeClass("show");
+        $(ev.currentTarget.getAttribute("data-tab"))
+          .addClass("show")
+          .addClass("active");
+      });
 
-		$(".team-member").on("mouseenter", ev => {
-			$(ev.currentTarget).find(".description").fadeIn();
-		}).on("mouseleave", ev => {
-			$(ev.currentTarget).find(".description").fadeOut();
-		});
-	});
+    $(".team-member")
+      .on("mouseenter", ev => {
+        $(ev.currentTarget)
+          .find(".description")
+          .fadeIn();
+      })
+      .on("mouseleave", ev => {
+        $(ev.currentTarget)
+          .find(".description")
+          .fadeOut();
+      });
+  });
+  var bg = $("#team-cover-picture");
+
+  function resizeBackground() {
+    bg.height($(window).height() + 60);
+  }
+
+  $(window).resize(resizeBackground);
+  resizeBackground();
 </script>
 {% endblock %}

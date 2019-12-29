@@ -3,7 +3,7 @@
 <div>
 	<div
 		class="jumbotron jumbotron-fluid text-center align-items-center m-0"
-		style="text-align:center; padding: 10em 0 10em 0; color: white;background: url('/stafferteam-dark.png') 0 -100px; background-size: cover;text-shadow: 2px 3px black;"
+		id="apply-cover-picture"
 	>
 		<h2 class="display-4" style="display: none;">Apply To Our Programs</h2>
 		<h4 class="lead" style="display: none; font-size: 2rem;">
@@ -24,7 +24,7 @@
 		<div class="col-md my-4">
 			<h2>Mentoring Program</h2>
 			<p>
-				Apply to our Mentoring program as a mentor or mentee
+				Apply to our Mentoring Program as a mentor or mentee
 			</p>
 			<a href="/apply/mentoring" class="button">Apply</a>
 		</div>
@@ -45,5 +45,14 @@
 			.children()
 			.fadeIn(1500);
 	});
+
+	var bg = $('#team-cover-picture');
+
+	function resizeBackground() {
+		bg.height($(window).height() + 60);
+	}
+
+	$(window).resize(resizeBackground);
+	resizeBackground();
 </script>
 {% endblock %}
