@@ -371,7 +371,7 @@ button:focus {
   text-shadow: 2px 3px black;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  /* height: 100vh; */
+  height: 80vh;
 }
 
 #mentorship-cover-picture {
@@ -400,7 +400,7 @@ button:focus {
 #team-cover-picture {
   padding: 10em 0 10em 0;
   color: white;
-  background: url("/stafferteam.jpg") 0 -40px;
+  background: url("/stafferteam-dark.png") 0 -40px;
   background-size: cover;
   text-shadow: 2px 3px black;
   background-repeat: no-repeat;
