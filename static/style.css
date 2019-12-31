@@ -326,6 +326,10 @@ h1 {
   text-align: center;
 }
 
+.animate-filter {
+  transition: filter 0.7s;
+}
+
 .mdc-drawer--modal {
   border: none;
 }
