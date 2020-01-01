@@ -135,12 +135,6 @@
 					filter: "grayscale(0%)"
 				});
 
-				let actions = ev.currentTarget.querySelector(".mdc-card__actions");
-				setTimeout(() =>
-					! isInViewport(actions) && actions.scrollIntoView(false),
-					500
-				);
-
 			})
 			.on('mouseleave', ev => {
 				$(ev.currentTarget)
