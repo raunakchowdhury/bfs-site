@@ -1,11 +1,58 @@
-{% extends "base.html" %}
+{% extends "base.html" %} {% block content %}
 
-{% block content %}
-<div style="margin-left:2%;">
-  <h2 style="margin-top:1%;">Apply to Our Programs</h2>
-  <p> BlockchainsForSchools runs a host of programs throughout the year. </p>
-  <p> Click <a href="/apply/intern">here</a> to apply to our Summer Immersion program.</p>
-  <p> Click <a href="/apply/mentoring">here</a> to apply to our Mentoring program as a mentor or mentee.</p>
-  <p> Click <a href="/apply/staff">here</a> to apply to become a BFS Staffer!</p>
+<div>
+	<div
+		class="jumbotron jumbotron-fluid text-center align-items-center m-0"
+		id="apply-cover-picture"
+	>
+		<h2 class="display-4" style="display: none;">Apply To Our Programs</h2>
+		<h4 class="lead" style="display: none; font-size: 2rem;">
+			BlockchainsForSchools runs a host of programs throughout the year
+		</h4>
+	</div>
 </div>
+
+<div class="text-center" style="margin-left:2%; margin-bottom: 4%;">
+	<div class="row about">
+		<div class="col-md my-4">
+			<h2>Summer Immersion</h2>
+			<p>
+				Apply to our Summer Immersion program
+			</p>
+			<a href="/apply/intern" class="button">Apply</a>
+		</div>
+		<div class="col-md my-4">
+			<h2>Mentoring Program</h2>
+			<p>
+				Apply to our Mentoring Program as a mentor or mentee
+			</p>
+			<a href="/apply/mentoring" class="button">Apply</a>
+		</div>
+		<div class="col-md my-4">
+			<h2>BFS Staffer</h2>
+			<p>
+				Apply to become a BFS Staffer
+			</p>
+			<a href="/apply/staff" class="button">Apply</a>
+		</div>
+	</div>
+</div>
+
+<!--Adds the fadein animation for the jumbotron text-->
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		$('.jumbotron')
+			.children()
+			.fadeIn(1500);
+	});
+
+	var bg = $('#team-cover-picture');
+
+	function resizeBackground() {
+		bg.height($(window).height() + 60);
+	}
+
+	$(window).resize(resizeBackground);
+	resizeBackground();
+</script>
 {% endblock %}

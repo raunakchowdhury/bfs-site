@@ -10,6 +10,10 @@
 
 ----- COLORS ----- */
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* ----- BODY ----- */
 
 body {
@@ -26,6 +30,14 @@ body {
   display: block;
   position: relative;
   padding-bottom: 100px; /* height of your footer */
+}
+
+a {
+  color: #4cbb85;
+}
+
+a:hover {
+  color: #4cbb85;
 }
 
 /* ----- HEADER & FOOTER ----- */
@@ -72,7 +84,7 @@ body {
 }
 
 .fa:hover {
-  opacity: 0.9;
+  opacity: 0.7;
   text-decoration: none;
   color: #4cbb85;
 }
@@ -84,10 +96,41 @@ h1 {
   color: #4cbb85;
   text-align: center;
   font-size: 100px;
-  padding-top: 50px;
+  padding-top: 10px;
   padding-bottom: 0px;
   margin: 0px;
   font-weight: 900;
+}
+
+.carousel {
+  position: relative;
+  text-align: center;
+}
+
+.carousel-item:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.carousel-heading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  -webkit-filter: drop-shadow(3px 3px 3px #222);
+  filter: drop-shadow(3px 3px 3px #222);
+}
+
+.carousel-inner {
+  width: 100%;
+  max-height: 700px !important;
 }
 
 .announce {
@@ -129,22 +172,42 @@ h1 {
   text-decoration: none;
 }
 
+.carousel-indicators li {
+  height: 13px;
+  width: 13px;
+  margin-left: 7px;
+  margin-right: 7px;
+}
+
+.carousel-indicators .active {
+  background-color: #4cbb85;
+}
+
 /* ----- ABOUT ----- */
 
 .about {
-  width: 90%;
-  margin: 0 auto;
+  text-align: center;
+  padding: 40px;
 }
 
 .about hr {
   width: 100%;
 }
 
+.about h2 {
+  font-family: "Red Hat Display";
+  color: #4cbb85;
+  text-align: center;
+  font-size: 40px;
+  padding-top: 10px;
+  padding-bottom: 0px;
+  margin: 0px;
+  font-weight: 700;
+}
+
 .about p {
   font-family: sans-serif;
-  text-align: center;
   padding: 25px;
-  padding-bottom: 0px;
   margin: 0px;
   font-size: 18px;
 }
@@ -203,4 +266,159 @@ h1 {
   font-size: 18px;
 }
 
+.nav-logo {
+  max-height: 48px;
+  /*noinspection CssInvalidPropertyValue*/
+  max-height: -webkit-fill-available;
+}
 
+/* ----- MDC THEME ----- */
+:root {
+  --mdc-theme-primary: #4cbb85;
+  --mdc-theme-secondary: #018786;
+  --mdc-theme-background: #fff;
+  --mdc-theme-surface: #fff;
+  --mdc-theme-error: #b00020;
+  --mdc-theme-on-primary: #fff;
+  --mdc-theme-on-secondary: #fff;
+  --mdc-theme-on-surface: #000;
+  --mdc-theme-on-error: #fff;
+  --mdc-theme-text-primary-on-background: rgba(0, 0, 0, 0.87);
+  --mdc-theme-text-secondary-on-background: rgba(0, 0, 0, 0.54);
+  --mdc-theme-text-hint-on-background: rgba(0, 0, 0, 0.38);
+  --mdc-theme-text-disabled-on-background: rgba(0, 0, 0, 0.38);
+  --mdc-theme-text-icon-on-background: rgba(0, 0, 0, 0.38);
+  --mdc-theme-text-primary-on-light: rgba(0, 0, 0, 0.87);
+  --mdc-theme-text-secondary-on-light: rgba(0, 0, 0, 0.54);
+  --mdc-theme-text-hint-on-light: rgba(0, 0, 0, 0.38);
+  --mdc-theme-text-disabled-on-light: rgba(0, 0, 0, 0.38);
+  --mdc-theme-text-icon-on-light: rgba(0, 0, 0, 0.38);
+  --mdc-theme-text-primary-on-dark: white;
+  --mdc-theme-text-secondary-on-dark: rgba(255, 255, 255, 0.7);
+  --mdc-theme-text-hint-on-dark: rgba(255, 255, 255, 0.5);
+  --mdc-theme-text-disabled-on-dark: rgba(255, 255, 255, 0.5);
+  --mdc-theme-text-icon-on-dark: rgba(255, 255, 255, 0.5);
+}
+
+.map-container {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+
+.map-container iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mdc-drawer__header {
+  background-color: #4cbb85;
+  padding-top: 8px;
+  padding-bottom: 9px;
+  text-align: center;
+}
+
+.animate-filter {
+  transition: filter 0.7s;
+}
+
+.mdc-drawer--modal {
+  border: none;
+}
+
+.supporters-tab img {
+  margin: 0 15px;
+}
+
+button:focus {
+  outline: none;
+}
+
+#sidebar-nav-logo {
+  width: 120px;
+  height: 48px;
+  display: inline-block;
+}
+
+.mdc-top-app-bar__row {
+  z-index: 2;
+}
+
+.carousel-indicators {
+  z-index: 1;
+}
+
+.homepageTable {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+#supporters {
+  margin-top: 40px;
+}
+
+#summer-immersion-cover-picture {
+  padding: 10em 0 10em 0;
+  color: white;
+  background: url("/summerimmersion.jpg") 0 -180px;
+  background-size: cover;
+  text-shadow: 2px 3px black;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 80vh;
+}
+
+#mentorship-cover-picture {
+  text-align: center;
+  padding: 10em 0 10em 0;
+  color: white;
+  background: url("/mentorship.jpg") 0 -100px;
+  background-size: cover;
+  text-shadow: 2px 3px black;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  /* height: 100vh; */
+}
+
+#hackathon-cover-picture {
+  padding: 10em 0 10em 0;
+  color: white;
+  background: url("/venue-blur-dark.jpg") 0 -40px;
+  background-size: cover;
+  text-shadow: 2px 3px black;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  /* height: 100vh; */
+}
+
+#team-cover-picture {
+  padding: 10em 0 10em 0;
+  color: white;
+  background: url("/stafferteam-dark.png") 0 -100px;
+  background-size: cover;
+  text-shadow: 2px 3px black;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  /* height: 100vh; */
+}
+
+#apply-cover-picture {
+  text-align: center;
+  padding: 10em 0 10em 0;
+  color: white;
+  background: url("/stafferteam-dark.png") 0 -100px;
+  background-size: cover;
+  text-shadow: 2px 3px black;
+  background-attachment: fixed;
+  /* height: 100vh; */
+}

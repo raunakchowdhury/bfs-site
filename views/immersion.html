@@ -1,11 +1,46 @@
-{% extends "base.html" %}
+{% extends "base.html" %} {% block content %}
 
-{% block content %}
-<div style="margin-left:2%;">
-	<h2 style="margin-left:2%;">
-		<h2 style="margin-top:1%">Summer Immersion Program</h2>
-		<p>Our summer internship program: running in July, Summer Immersion connects high school students to companies that are in need of interns. We create relationships with startups and companies to create internships that did not exist, and then match high schoolers that apply through our program to them. Our first iteration occurred in July 2019, with 65 students from 5 states (New York, New Jersey, Connecticut, Washington, and Texas) working at 20 blockchain companies based in NY, CT, London and Bangkok. We host monthly workshops for them in partnership with Coinbase, Consensys, IBM, and the New York Blockchain Center.
-		</p>
-		<h3 style="margin-top:1%;">Interested in applying as an intern? Go <a href="/apply">here</a> to apply</h3>
+<div
+  class="jumbotron jumbotron-fluid text-center align-items-center m-0"
+  id="summer-immersion-cover-picture"
+>
+  <h2 class="display-4" style="display: none;">Summer Immersion</h2>
+  <h4 class="lead" style="display: none; font-size: 2rem;">Summer 2020</h4>
 </div>
+
+<div class="text-center" style="margin-left:2%; margin-bottom: 4%;">
+  <h2 style="margin-top:2%">Summer Immersion Program</h2>
+  <p class="text-center">
+    Our summer internship program: running in July, Summer Immersion connects
+    high school students to companies that are in need of interns. We create
+    relationships with startups and companies to create internships that did not
+    exist, and then match high schoolers that apply through our program to them.
+    Our first iteration occurred in July 2019, with 65 students from 5 states
+    (New York, New Jersey, Connecticut, Washington, and Texas) working at 20
+    blockchain companies based in NY, CT, London and Bangkok. We host monthly
+    workshops for them in partnership with Coinbase, Consensys, IBM, and the New
+    York Blockchain Center.
+  </p>
+  <h3 class="text-center" style="margin-top:1%;">
+    Interested in applying as an intern? Go
+    <a href="/summerimmersion/apply">here</a> to apply
+  </h3>
+</div>
+
+<!--Adds the fadein animation for the jumbotron text-->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    $(".jumbotron")
+      .children()
+      .fadeIn(1500);
+  });
+  var bg = $("#team-cover-picture");
+
+  function resizeBackground() {
+    bg.height($(window).height() + 60);
+  }
+
+  $(window).resize(resizeBackground);
+  resizeBackground();
+</script>
 {% endblock %}
