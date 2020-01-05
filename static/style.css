@@ -366,55 +366,61 @@ button:focus {
 #summer-immersion-cover-picture {
   padding: 10em 0 10em 0;
   color: white;
-  background: url("/summerimmersion.jpg") 0 -180px;
-  background-size: cover;
+  background: url("/summerimmersion.jpg");
   text-shadow: 2px 3px black;
-  background-repeat: no-repeat;
+  min-height: 300px;
   background-attachment: fixed;
-  height: 80vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #mentorship-cover-picture {
   text-align: center;
   padding: 10em 0 10em 0;
   color: white;
-  background: url("/mentorship.jpg") 0 -100px;
-  background-size: cover;
+  background: url("/mentorship.jpg");
   text-shadow: 2px 3px black;
+  min-height: 300px;
+  background-attachment: fixed;
+  background-position: center;
   background-repeat: no-repeat;
-  /* background-attachment: fixed; */
-  /* height: 100vh; */
+  background-size: cover;
 }
 
 #hackathon-cover-picture {
   padding: 10em 0 10em 0;
   color: white;
-  background: url("/venue-blur-dark.jpg") 0 -40px;
-  background-size: cover;
+  background: url("/venue-blur-dark.jpg");
   text-shadow: 2px 3px black;
-  background-repeat: no-repeat;
+  min-height: 300px;
   background-attachment: fixed;
-  /* height: 100vh; */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #team-cover-picture {
   padding: 10em 0 10em 0;
   color: white;
-  background: url("/stafferteam-dark.png") 0 -100px;
-  background-size: cover;
+  background: url("/stafferteam-dark.png");
   text-shadow: 2px 3px black;
+  min-height: 300px;
+  background-attachment: fixed;
+  background-position: center;
   background-repeat: no-repeat;
-  /* background-attachment: fixed; */
-  /* height: 100vh; */
+  background-size: cover;
 }
 
 #apply-cover-picture {
   text-align: center;
   padding: 10em 0 10em 0;
   color: white;
-  background: url("/stafferteam-dark.png") 0 -100px;
-  background-size: cover;
+  background: url("/stafferteam-dark.png");
   text-shadow: 2px 3px black;
+  min-height: 300px;
   background-attachment: fixed;
-  /* height: 100vh; */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }

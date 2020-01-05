@@ -6,80 +6,63 @@
 </div>
 
 <div>
-<<<<<<< HEAD
-	<div class="mdc-tab-bar" role="tablist">
-		<div class="mdc-tab-scroller">
-			<div class="mdc-tab-scroller__scroll-area">
-				<div class="mdc-tab-scroller__scroll-content tab-items-container">
-					{{ mdcTabItem("", "Executives", true, {"data-tab": "#exec"} ) }}
-					{{ mdcTabItem("", "Hackathon", false, {"data-tab": "#hackathon"} ) }}
-					{{ mdcTabItem("", "Mentorship Program", false, {"data-tab": "#mentorship"}) }}
-					{{ mdcTabItem("", "Design", false, {"data-tab": "#design"}) }}
-					{{ mdcTabItem("", "Web Development", false, {"data-tab": "#webdev"} ) }}
-					{{ mdcTabItem("", "Outreach", false, {"data-tab": "#outreach"} ) }}
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="mdc-layout-grid">
-		<div class="tab-content">
-			<p class="text-center">Click/Hover on a card to see that person's description</p>
-			<div class="tab-pane fade show active"
-			     id="exec"
-			     role="tabpanel"
-			>
-				<div class="mdc-layout-grid__inner">
-					{% include "./teamTabs/exec.njk" %}
-				</div>
-			</div>
+  <div class="mdc-tab-bar" role="tablist">
+    <div class="mdc-tab-scroller">
+      <div class="mdc-tab-scroller__scroll-area">
+        <div class="mdc-tab-scroller__scroll-content tab-items-container">
+          {{ mdcTabItem("", "Executives", true, {"data-tab": "#exec"} ) }} {{
+          mdcTabItem("", "Hackathon", false, {"data-tab": "#hackathon"} ) }} {{
+          mdcTabItem("", "Mentorship Program", false, {"data-tab":
+          "#mentorship"}) }} {{ mdcTabItem("", "Design", false, {"data-tab":
+          "#design"}) }} {{ mdcTabItem("", "Web Development", false,
+          {"data-tab": "#webdev"} ) }} {{ mdcTabItem("", "Outreach", false,
+          {"data-tab": "#outreach"} ) }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mdc-layout-grid">
+    <div class="tab-content">
+      <p class="text-center">
+        Click/Hover on a card to see that person's description
+      </p>
+      <div class="tab-pane fade show active" id="exec" role="tabpanel">
+        <div class="mdc-layout-grid__inner">
+          {% include "./teamTabs/exec.njk" %}
+        </div>
+      </div>
 
-			<div class="tab-pane fade"
-			     id="hackathon"
-			     role="tabpanel"
-			>
-				<div class="mdc-layout-grid__inner">
-					{% include "./teamTabs/hackathon.njk" %}
-				</div>
-			</div>
+      <div class="tab-pane fade" id="hackathon" role="tabpanel">
+        <div class="mdc-layout-grid__inner">
+          {% include "./teamTabs/hackathon.njk" %}
+        </div>
+      </div>
 
-			<div class="tab-pane fade"
-			     id="mentorship"
-			     role="tabpanel"
-			>
-				<div class="mdc-layout-grid__inner">
-					{% include "./teamTabs/mentorship.njk" %}
-				</div>
-			</div>
+      <div class="tab-pane fade" id="mentorship" role="tabpanel">
+        <div class="mdc-layout-grid__inner">
+          {% include "./teamTabs/mentorship.njk" %}
+        </div>
+      </div>
 
+      <div class="tab-pane fade" id="design" role="tabpanel">
+        <div class="mdc-layout-grid__inner">
+          {% include "./teamTabs/design.njk" %}
+        </div>
+      </div>
 
-			<div class="tab-pane fade"
-			     id="design"
-			     role="tabpanel"
-			>
-				<div class="mdc-layout-grid__inner">
-					{% include "./teamTabs/design.njk" %}
-				</div>
-			</div>
+      <div class="tab-pane fade" id="webdev" role="tabpanel">
+        <div class="mdc-layout-grid__inner">
+          {% include "./teamTabs/webdev.njk" %}
+        </div>
+      </div>
 
-			<div class="tab-pane fade"
-			     id="webdev"
-			     role="tabpanel"
-			>
-				<div class="mdc-layout-grid__inner">
-					{% include "./teamTabs/webdev.njk" %}
-				</div>
-			</div>
-
-			<div class="tab-pane fade"
-			     id="outreach"
-			     role="tabpanel"
-			>
-				<div class="mdc-layout-grid__inner">
-					{% include "./teamTabs/outreach.njk" %}
-				</div>
-			</div>
-		</div>
-	</div>
+      <div class="tab-pane fade" id="outreach" role="tabpanel">
+        <div class="mdc-layout-grid__inner">
+          {% include "./teamTabs/outreach.njk" %}
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <!--Adds the fadein animation for the jumbotron text-->
@@ -112,13 +95,13 @@
           .fadeOut();
       });
   });
-  var bg = $("#team-cover-picture");
+  // var bg = $("#team-cover-picture");
 
-  function resizeBackground() {
-    bg.height($(window).height() + 60);
-  }
+  // function resizeBackground() {
+  //   bg.height($(window).height() + 60);
+  // }
 
-  $(window).resize(resizeBackground);
-  resizeBackground();
+  // $(window).resize(resizeBackground);
+  // resizeBackground();
 </script>
 {% endblock %}
