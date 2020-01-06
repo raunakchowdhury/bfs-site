@@ -428,3 +428,9 @@ button:focus {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+#hackathon-textbox, #immersion-textbox, #mentorship-textbox {
+  margin-left: 6%;
+  margin-right: 6%;
+  margin-bottom: 4%;
+}
