@@ -56,9 +56,9 @@
 				role="tabpanel"
 				aria-labelledby="sponsors-tab"
 		>
-			<div class="container py-5 text-center">
+			<div class="container pt-5 pb-3 text-center">
 				<h3>Sponsors</h3>
-				<div class="mb-5 pb-5 row d-flex flex-wrap align-items-center">
+				<div class="row d-flex flex-wrap align-items-center">
 					<div class="col-sm my-3">
 						<a href="https://ethereum.org">
 							<img src="/ethereum-branding.png" alt="ethereum" width="200"/>
@@ -78,9 +78,19 @@
 						<a href="https://www.trailofbits.com/">
                             <img src="/supporters/trail-of-bits.png" alt="trail of bits" width="200"/>
 						</a>
-					</div>
+                    </div>
 				</div>
-			</div>
+            </div>
+			<div class="container py-3 mb-5 text-center">
+				<h3>Travel Sponsors</h3>
+				<div class="row d-flex flex-wrap align-items-center">
+                    <div class="col-sm my-3">
+                        <a href="https://blockchainedu.org/">           
+                            <img src="/supporters/ben_square_logo.png" width="200" />
+                        </a>
+                    </div>
+                </div>
+            </div>
 		</div>
 		<div
 				class="tab-pane fade"
@@ -88,7 +98,7 @@
 				role="tabpanel"
 				aria-labelledby="venue-tab"
 		>
-			<div class="container py-5 text-center">
+			<div class="container py-5 text-center" id="hackathon-textbox">
 				<h3>Our venue is located at Microsoft Times Square (11 Times Square, New York, NY 10036).</h3>
 				<p>Located in the heart of NYC and right across from the Port Authority Bus Terminal and the Times
 					Square MTA station, Microsoft Times Square offers a modern and well-equipped hacking space that is
@@ -136,14 +146,5 @@
 			$(ev.currentTarget.getAttribute("data-tab")).addClass("show").addClass("active");
 		});
 	});
-
-	var bg = $("#team-cover-picture");
-
-	function resizeBackground() {
-		bg.height($(window).height() + 69);
-	}
-
-	$(window).resize(resizeBackground);
-	resizeBackground();
 </script>
 {% endblock %}
