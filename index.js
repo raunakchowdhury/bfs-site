@@ -80,6 +80,10 @@ app.get('/summerimmersion', (req, res) => {
 	res.render('immersion.html');
 });
 
+app.get('/chapters', (req, res) => {
+	res.render('chapters.html');
+});
+
 app.listen(port, () => console.log(`App running on localhost:${port}`));
 
 app.use((req, res, next) => {
