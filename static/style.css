@@ -429,8 +429,21 @@ button:focus {
   background-size: cover;
 }
 
-#hackathon-textbox, #immersion-textbox, #mentorship-textbox {
+#immersion-textbox, #mentorship-textbox {
   margin-left: 6%;
   margin-right: 6%;
   margin-bottom: 4%;
+}
+/* 
+.hackathon-textbox {
+  margin-right: 6%;
+} */
+
+#faq-header {
+  margin-bottom: 24px;
+}
+
+#faq-question, #faq-answer {
+  text-align: left;
+  margin-left: 14px;
 }
