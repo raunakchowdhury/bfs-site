@@ -439,7 +439,14 @@ button:focus {
   margin-bottom: 24px;
 }
 
-#faq-question, #faq-answer {
+#faq-question {
   text-align: left;
   margin-left: 14px;
+  margin-top: 20px;
+}
+
+#faq-answer {
+  text-align: left;
+  margin-left: 14px;
+  margin-bottom: 2%;
 }
