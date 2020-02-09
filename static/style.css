@@ -401,7 +401,7 @@ button:focus {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 176vh 100vh;
 }
 
 #team-cover-picture {
