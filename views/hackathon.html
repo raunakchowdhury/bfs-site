@@ -5,7 +5,7 @@
 <div>
 	<div class="mdc-card background-card text-center" id="hackathon-cover-picture">
 		<h2 class="display-4" style="display: none">Blockchains4Hacks 2020</h2>
-		<h4 class="lead" style="display: none; font-size: 2rem;">May 30-31, 2020</h4>
+		<h5 class="lead" style="display: none; font-size: 2rem;">May 30-31, 2020</h5>
 	</div>
 </div>
 <div>
@@ -48,25 +48,56 @@
 		<div class="tab-pane fade" id="sponsors" role="tabpanel" aria-labelledby="sponsors-tab">
 			<div class="container pt-5 pb-3 text-center">
 				<h3>Sponsors</h3>
-				<div class="row d-flex flex-wrap align-items-center">
+				<div class="row d-flex flex-wrap align-items-center py-3">
+					<div class="col-sm my-3">
+						<a href="https://www.microsoft.com">
+							<img src="/microsoft-branding.png" alt="microsoft" width="500" />
+						</a>
+					</div>
+					<div class="col-sm my-3">
+						<a href="https://cryptonomic.tech/">
+							<img src="/supporters/cryptonomic.jpg" alt="cryptonomic" width="500" />
+						</a>
+					</div>
+				</div>
+				<div class="row d-flex flex-wrap align-items-center py-3">
+					<div class="col-sm my-3">
+						<a href="https://www.ey.com/">
+							<img src="/supporters/ey.png" alt="ey" width="200" />
+						</a>
+					</div>
 					<div class="col-sm my-3">
 						<a href="https://ethereum.org">
 							<img src="/ethereum-branding.png" alt="ethereum" width="200" />
 						</a>
 					</div>
 					<div class="col-sm my-3">
-						<a href="https://www.microsoft.com">
-							<img src="/microsoft-branding.png" alt="microsoft" width="200" />
+						<a href="https://www.citigroup.com/citi/">
+							<img src="/supporters/citi.png" alt="citi" width="200" />
 						</a>
 					</div>
+				</div>
+				<div class="row d-flex flex-wrap align-items-center py-3">
 					<div class="col-sm my-3">
-						<a href="https://hackclub.com/bank/">
-							<img src="/hack-club-branding.png" alt="hack club" width="200" />
+						<a href="https://gemini.com/">
+							<img src="/supporters/gemini.png" alt="gemini" width="150" />
 						</a>
 					</div>
 					<div class="col-sm my-3">
 						<a href="https://www.trailofbits.com/">
-							<img src="/supporters/trail-of-bits.png" alt="trail of bits" width="200" />
+							<img src="/supporters/trail-of-bits.png" alt="trail of bits" width="150" />
+						</a>
+					</div>
+					<div class="col-sm my-3">
+						<a href="https://www.kadena.io/">
+							<img src="/supporters/kadena.png" alt="kadena" width="150" />
+						</a>
+					</div>
+				</div>
+				<div class="row d-flex flex-wrap align-items-center py-3">
+					<div class="col-sm my-3">
+						<a href="https://hackclub.com/bank/">
+							<img src="/hack-club-branding.png" alt="hack club" width="200" />
 						</a>
 					</div>
 				</div>
@@ -76,14 +107,19 @@
 				<div class="row d-flex flex-wrap align-items-center">
 					<div class="col-sm my-3">
 						<a href="https://blockchainedu.org/">
-							<img src="/supporters/ben_square_logo.png" width="200" />
+							<img src="/supporters/ben_square_logo.png" alt="ben" width="200" />
+						</a>
+					</div>
+					<div class="col-sm my-3">
+						<a href="https://executebig.org/">
+							<img src="/supporters/executebig.svg" alt="execute big" width="200" />
 						</a>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="tab-pane fade" id="venue" role="tabpanel" aria-labelledby="venue-tab">
-			<div class="container py-5 text-center" id="hackathon-textbox">
+			<div class="container py-5 text-center hackathon-textbox">
 				<h3>Our venue is located at Microsoft Times Square (11 Times Square, New York, NY 10036).</h3>
 				<p>Located in the heart of NYC and right across from the Port Authority Bus Terminal and the Times
 					Square MTA station, Microsoft Times Square offers a modern and well-equipped hacking space that is
@@ -114,27 +150,27 @@
 			</div>
 		</div>
 		<div class="tab-pane fade" id="faq" role="tabpanel" aria-labelledby="venue-tab">
-			<div class="container py-5 text-center" id="hackathon-textbox">
-				<h3>Frequently Asked Questions</h3>
-				<h4>What is a hackathon?</h4>
+			<div class="container py-5 text-center hackathon-textbox">
+				<h3 id="faq-header">Frequently Asked Questions</h3>
+				<h5 id="faq-question">What is a hackathon?</h5>
 
-				<p> A hackathon is a gathering where you can come together with other engineers, programmers, and cool people to you turn your ideas into a real project in 24 hours. You take care of hacking, programming, creativity, and having a good time. We provide the venue, mentors, fun activities, speakers, workshops, food, friends, and almost everything you’ll ever need. </p>
+				<p id="faq-answer"> A hackathon is a gathering where you can come together with other engineers, programmers, and cool people to you turn your ideas into a real project in 24 hours. You take care of hacking, programming, creativity, and having a good time. We provide the venue, mentors, fun activities, speakers, workshops, food, friends, and almost everything you’ll ever need. </p>
 					
-				<h4>	Who can participate in B4H?</h4>
+				<h5 id="faq-question">	Who can participate in B4H?</h5>
 					
-				<p>	Anyone enrolled as a student can attend! (That includes both high school and college students!) Students with an interest in blockchain technology are highly encouraged to apply! If you don't fit that description, you are welcome to attend as a mentor or volunteer.</p>
+				<p id="faq-answer">	Anyone enrolled as a student can attend! (That includes both high school and college students!) Students with an interest in blockchain technology are highly encouraged to apply! If you don't fit that description, you are welcome to attend as a mentor or volunteer.</p>
 					
-					<h4>What if I don’t understand blockchain technology or know how to develop applications using it?</h4>
+					<h5 id="faq-question">What if I don’t understand blockchain technology or know how to develop applications using it?</h5>
 					
-					<p>Don’t worry! We will be having extended 3-hour workshops at the start of the hackathon presented by our sponsors for students who don’t understand blockchain. These workshops will walk through the technology, what it’s used for, and how to develop with it! Additionally, professional blockchain software engineers will be onsite to assist with any questions you might have!</p>
+					<p id="faq-answer">Don’t worry! We will be having extended 3-hour workshops at the start of the hackathon presented by our sponsors for students who don’t understand blockchain. These workshops will walk through the technology, what it’s used for, and how to develop with it! Additionally, professional blockchain software engineers will be onsite to assist with any questions you might have!</p>
 					
-					<h4>How much does B4H cost?</h4>
+					<h5 id="faq-question">How much does B4H cost?</h5>
 					
-				<p>	Absolutely nothing on your end!  We provide food, swag, workspace, and WiFi for your entire 24 hours. Not only will we cover you for the weekend, we can even help some people cover travel. That’s right! Here at B4H we want to make things as accessible as possible for those who need it. For more info, see the FAQ below! </p>
+				<p id="faq-answer">	Absolutely nothing on your end!  We provide food, swag, workspace, and WiFi for your entire 24 hours. Not only will we cover you for the weekend, we can even help some people cover travel. That’s right! Here at B4H we want to make things as accessible as possible for those who need it. For more info, see the FAQ below! </p>
 					
-				<h4>	Will you be offering travel reimbursements?</h4>
+				<h5 id="faq-question">	Will you be offering travel reimbursements?</h5>
 					
-				<p>	Here at B4H, one of our missions is to support minorities in tech with their goals. While we can’t guarantee reimbursements for everyone, we will be offering some reimbursements.  Please indicate that you need travel reimbursement in your application and answer the questions! 
+				<p id="faq-answer">	Here at B4H, one of our missions is to support minorities in tech with their goals. While we can’t guarantee reimbursements for everyone, we will be offering some reimbursements.  Please indicate that you need travel reimbursement in your application and answer the questions! 
 					
 					We will be considering factors such as family income and demographic underrepresentation, so low income students or underrepresented minorities are especially encouraged to apply.  We will try to accommodate everyone with at least partial reimbursement if they are outside of the NYC area, subject to a sliding scale. 
 					
@@ -142,23 +178,21 @@
 					
 					For college students, you will be considered for reimbursement by our team. Stay tuned — we’re working out a partnership for college student reimbursements as well!
 					
-					Don’t forget to apply by our travel reimbursement deadline, ___________ ! </p>
+					Don’t forget to apply by our travel reimbursement deadline, which is TBD! </p>
 					
 					
-				<h4>	What should I bring?</h4>
+				<h5 id="faq-question">	What should I bring?</h5>
 					
-				<p>	Bring a photo ID, your laptop and charger, a change of clothes, toiletries, a sleeping bag/blanket, your hacker setup, and yourself! </p>
+				<p id="faq-answer">	Bring a photo ID, your laptop and charger, a change of clothes, toiletries, a sleeping bag/blanket, your hacker setup, and yourself! </p>
 					
-				<h4>	What if I don't have any coding or hacking experience?</h4>
+				<h5 id="faq-question">	What if I don't have any coding or hacking experience?</h5>
 					
-			<p>		B4H is here to help! During the hackathon, we have beginner workshops and mentors to help you throughout your stay. No prior experience is necessary! Not only do we want you to be able to build something incredible, we’re preparing individuals without blockchain experience via our workshop sequences before our hackathon! Visit this page to find out more about our workshops. [[insert link]] </p>
+			<p id="faq-answer">		B4H is here to help! During the hackathon, we have beginner workshops and mentors to help you throughout your stay. No prior experience is necessary! Not only do we want you to be able to build something incredible, we’re preparing individuals without blockchain experience via our workshop sequences before our hackathon! Visit this page to find out more about our workshops. Link is TBD. </p>
 					
-				<h4>	Have more questions? </h4>
-					
-					
-				<p>	Email our extremely helpful team at hackathon@blockchainsforschools.org </p>
+				<h5 id="faq-question">	Have more questions? </h5>
 					
 					
+				<p id="faq-answer">	Email our extremely helpful team at hackathon@blockchainsforschools.org </p>
 					
 			</div>
 		</div>
