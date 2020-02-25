@@ -1,5 +1,10 @@
-
 function App() {
+	const buttonStyles = {
+		position: "fixed",
+		bottom: "2rem",
+		right: "2rem"
+	};
+
 	return (
 		<div>
 			<About/>
@@ -7,8 +12,27 @@ function App() {
 			<Venue/>
 			<Schedule/>
 			<FAQs/>
+
+			<Button style={buttonStyles} onClick={() => window.open("https://hackathonbfs.typeform.com/to/fD5rzJ")}>
+				Apply Now!
+			</Button>
 			<br/>
 		</div>
+	)
+}
+
+function Button({children, style, onClick}){
+	const ref = React.createRef();
+
+	React.useEffect(() => {
+		window.mdc.ripple.MDCRipple.attachTo(ref.current);
+	}, []);
+
+	return (
+		<button className="mdc-button mdc-button--raised" style={style} ref={ref} onClick={onClick}>
+			<span className="mdc-button__ripple"/>
+			{children}
+		</button>
 	)
 }
 
@@ -173,13 +197,21 @@ function Sponsors(){
 					width={"9rem"}
 				/>
 
+			</Grid>
+
+			<Grid>
+				<GridCell
+					span={4}
+					className={["desktop-only"]}
+				/>
+
 				<SponsorCell
 					alt={"Hack Club Bank Logo"}
 					src={"/hack-club-branding.png"}
 					url={"https://hackclub.com/bank/"}
 					width={"11rem"}
+					spanTablet={8}
 				/>
-
 			</Grid>
 
 			<Title center>Travel Sponsors</Title>
@@ -340,7 +372,12 @@ Regular: 4/26/20<br/>
 
 			<QuestionBox
 				question={`Will you be offering travel reimbursements?`}
-				answer={<span>Here at B4H, one of our missions is to support minorities in tech with their goals. While we can’t guarantee reimbursements for everyone if you are applying through our Regular or Late round, we will be offering some reimbursements.  Please indicate that you need travel reimbursement in your application and answer the questions!
+				answer={<span>
+						<b>If you apply through Early, you qualify for up to $50 in travel reimbursement!</b>
+						<br/>
+						<br/>
+
+						Here at B4H, one of our missions is to support minorities in tech with their goals. While we can’t guarantee reimbursements for everyone if you are applying through our Regular or Late round, we will be offering some reimbursements.  Please indicate that you need travel reimbursement in your application and answer the questions!
 							<br/>
 							<br/>
 

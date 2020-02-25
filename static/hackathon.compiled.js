@@ -17,19 +17,47 @@ function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.
 function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
 
 function App() {
-	return React.createElement("div", null, React.createElement(About, null), React.createElement(Sponsors, null), React.createElement(Venue, null), React.createElement(Schedule, null), React.createElement(FAQs, null), React.createElement("br", null));
+	var buttonStyles = {
+		position: "fixed",
+		bottom: "2rem",
+		right: "2rem"
+	};
+	return React.createElement("div", null, React.createElement(About, null), React.createElement(Sponsors, null), React.createElement(Venue, null), React.createElement(Schedule, null), React.createElement(FAQs, null), React.createElement(Button, {
+		style: buttonStyles,
+		onClick: function onClick() {
+			return window.open("https://hackathonbfs.typeform.com/to/fD5rzJ");
+		}
+	}, "Apply Now!"), React.createElement("br", null));
 }
 
-function Container(_ref) {
-	var children = _ref.children;
+function Button(_ref) {
+	var children = _ref.children,
+		style = _ref.style,
+		onClick = _ref.onClick;
+	var ref = React.createRef();
+	React.useEffect(function () {
+		window.mdc.ripple.MDCRipple.attachTo(ref.current);
+	}, []);
+	return React.createElement("button", {
+		className: "mdc-button mdc-button--raised",
+		style: style,
+		ref: ref,
+		onClick: onClick
+	}, React.createElement("span", {
+		className: "mdc-button__ripple"
+	}), children);
+}
+
+function Container(_ref2) {
+	var children = _ref2.children;
 	return React.createElement("div", {
 		className: ["content-container"]
 	}, children);
 }
 
-function Title(_ref2) {
-	var children = _ref2.children,
-		center = _ref2.center;
+function Title(_ref3) {
+	var children = _ref3.children,
+		center = _ref3.center;
 	var styles = {
 		fontFamily: "'Red Hat Display', sans-serif",
 		color: "#4cbb85",
@@ -50,8 +78,8 @@ function About() {
 	}, "About"), React.createElement("p", null, "Blockchains4Hacks is one of the first introductory blockchain-focused hackathons open to high school and college students. For 24 hours, students will learn about ways to integrate blockchain into their applications, hacking away at challenges, and building applications that integrate those services. We plan to host workshops leading up to the hackathon, allowing participants to immerse themselves in blockchain before building their projects."), React.createElement("p", null, "In our continued commitment and support for diversity, we plan to offer travel reimbursements for students who are not located in NYC. We also plan to set funds aside specifically for hackers whose backgrounds are commonly underrepresented in the tech industry, in addition to low income students."), React.createElement("p", null, "Our hope is that students will walk away with a deeper knowledge of blockchain as well as firsthand experience on how to use the technology. We also hope that the projects created at this hackathon will blossom and continue even after B4H 2020 is over."));
 }
 
-function Grid(_ref3) {
-	var children = _ref3.children;
+function Grid(_ref4) {
+	var children = _ref4.children;
 	return React.createElement("div", {
 		className: "mdc-layout-grid"
 	}, React.createElement("div", {
@@ -59,12 +87,12 @@ function Grid(_ref3) {
 	}, children));
 }
 
-function GridCell(_ref4) {
-	var span = _ref4.span,
-		spanTablet = _ref4.spanTablet,
-		children = _ref4.children,
-		style = _ref4.style,
-		className = _ref4.className;
+function GridCell(_ref5) {
+	var span = _ref5.span,
+		spanTablet = _ref5.spanTablet,
+		children = _ref5.children,
+		style = _ref5.style,
+		className = _ref5.className;
 	var classes = ["mdc-layout-grid__cell--span-" + (span || 4)];
 	if (className) classes.push.apply(classes, _toConsumableArray(className));
 	if (spanTablet) classes.push("mdc-layout-grid__cell--span-".concat(spanTablet, "-tablet"));
@@ -74,13 +102,13 @@ function GridCell(_ref4) {
 	}, children);
 }
 
-function SponsorCell(_ref5) {
-	var alt = _ref5.alt,
-		src = _ref5.src,
-		span = _ref5.span,
-		spanTablet = _ref5.spanTablet,
-		url = _ref5.url,
-		width = _ref5.width;
+function SponsorCell(_ref6) {
+	var alt = _ref6.alt,
+		src = _ref6.src,
+		span = _ref6.span,
+		spanTablet = _ref6.spanTablet,
+		url = _ref6.url,
+		width = _ref6.width;
 	var imageStyles = {
 		maxWidth: "100%",
 		width: width,
@@ -155,11 +183,15 @@ function Sponsors() {
 		src: "/supporters/kadena.png",
 		url: "https://www.kadena.io/",
 		width: "9rem"
+	})), React.createElement(Grid, null, React.createElement(GridCell, {
+		span: 4,
+		className: ["desktop-only"]
 	}), React.createElement(SponsorCell, {
 		alt: "Hack Club Bank Logo",
 		src: "/hack-club-branding.png",
 		url: "https://hackclub.com/bank/",
-		width: "11rem"
+		width: "11rem",
+		spanTablet: 8
 	})), React.createElement(Title, {
 		center: true
 	}, "Travel Sponsors"), React.createElement(Grid, null, React.createElement(GridCell, {
@@ -231,9 +263,9 @@ function Schedule() {
 	}, "TBD! We will release the schedule closer to the hackathon date."));
 }
 
-function QuestionBox(_ref6) {
-	var question = _ref6.question,
-		answer = _ref6.answer;
+function QuestionBox(_ref7) {
+	var question = _ref7.question,
+		answer = _ref7.answer;
 
 	var _React$useState = React.useState(false),
 		_React$useState2 = _slicedToArray(_React$useState, 2),
@@ -290,7 +322,7 @@ function FAQs() {
 		answer: React.createElement("span", null, "Absolutely nothing on your end!  We provide food, swag, workspace, and WiFi for your entire 24 hours. Not only will we cover you for the weekend, ", React.createElement("b", null, "we can even help some people cover travel."), " That\u2019s right! Here at B4H we want to make things as accessible as possible for those who need it. For more info, see the FAQ below!")
 	}), React.createElement(QuestionBox, {
 		question: "Will you be offering travel reimbursements?",
-		answer: React.createElement("span", null, "Here at B4H, one of our missions is to support minorities in tech with their goals. While we can\u2019t guarantee reimbursements for everyone if you are applying through our Regular or Late round, we will be offering some reimbursements.  Please indicate that you need travel reimbursement in your application and answer the questions!", React.createElement("br", null), React.createElement("br", null), React.createElement("b", null, "For our other application rounds, we will be considering factors such as family income and demographic underrepresentation, so low income students or underrepresented minorities are especially encouraged to apply.  We will try to accommodate everyone with at least partial reimbursement if they are outside of the NYC area, subject to a sliding scale. "), React.createElement("br", null), React.createElement("br", null), "For high school students, we\u2019re happy to announce we\u2019ve partnered with ", React.createElement("b", null, "Execute Big"), " to provide travel reimbursements! Once you fill out the form and we determine you\u2019re eligible, your information be passed on to them for consideration (if you apply through Regular or Late)! If you are accepted, congratulations! You\u2019ll be covered at least in part by Execute Big. If you aren\u2019t accepted, you will then be considered for reimbursement by our team.", React.createElement("br", null), React.createElement("br", null), "For college students, you will be considered for reimbursement by our team. Stay tuned \u2014 we\u2019re working out a partnership for college student reimbursements as well!")
+		answer: React.createElement("span", null, React.createElement("b", null, "If you apply through Early, you qualify for up to $50 in travel reimbursement!"), React.createElement("br", null), React.createElement("br", null), "Here at B4H, one of our missions is to support minorities in tech with their goals. While we can\u2019t guarantee reimbursements for everyone if you are applying through our Regular or Late round, we will be offering some reimbursements.  Please indicate that you need travel reimbursement in your application and answer the questions!", React.createElement("br", null), React.createElement("br", null), React.createElement("b", null, "For our other application rounds, we will be considering factors such as family income and demographic underrepresentation, so low income students or underrepresented minorities are especially encouraged to apply.  We will try to accommodate everyone with at least partial reimbursement if they are outside of the NYC area, subject to a sliding scale. "), React.createElement("br", null), React.createElement("br", null), "For high school students, we\u2019re happy to announce we\u2019ve partnered with ", React.createElement("b", null, "Execute Big"), " to provide travel reimbursements! Once you fill out the form and we determine you\u2019re eligible, your information be passed on to them for consideration (if you apply through Regular or Late)! If you are accepted, congratulations! You\u2019ll be covered at least in part by Execute Big. If you aren\u2019t accepted, you will then be considered for reimbursement by our team.", React.createElement("br", null), React.createElement("br", null), "For college students, you will be considered for reimbursement by our team. Stay tuned \u2014 we\u2019re working out a partnership for college student reimbursements as well!")
 	}), React.createElement(QuestionBox, {
 		question: "What should I bring?",
 		answer: React.createElement("span", null, "Bring a photo ID, your laptop and charger, a change of clothes, toiletries, a sleeping bag/blanket, your hacker setup, and yourself!")
