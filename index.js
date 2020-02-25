@@ -2,6 +2,12 @@ const express = require('express');
 const nunjucks = require('nunjucks');
 const app = express();
 const port = process.env.PORT || 3000;
+const cluster = require("cluster");
+
+if(Number(process.env.NUM_CLUSTER) && cluster.isMaster){
+	for(let x = 0; x < Number(process.env.NUM_CLUSTER) ; x++)
+		cluster.fork();
+}
 
 // app.set("view engine", "nunjucks");
 app.use(express.static(__dirname + '/static'));
