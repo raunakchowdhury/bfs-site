@@ -354,6 +354,26 @@ function FAQs() {
 			/>
 
 			<QuestionBox
+				question={`What are the hackathon challenges like?`}
+				answer={<span>There will be two categories of challenge — the General Challenges and the Sponsor Challenges. The General Challenges will be broken up into a High School and College circuit (high school teams participate in the High School circuit, and college teams participate in the College circuit); the Challenges for these include the Best Hack, Second Best Hack, etc. Note that to qualify for this Challenge, a team submission must use and elaborate on the blockchain component of their application. Up to $2,000 can be won from these Challenges!
+					<br/>
+					<br/>
+The Sponsor Challenges are challenges put forward by sponsors; usually these including using a sponsor’s platform (e.g. Ethereum/Solidity) to solve problems in an industry vertical (verticals include fintech, healthcare, environmentalism, etc.). Up to $1,000 can be won from these Challenges! You can submit to as many challenges as you like.
+				</span>}
+			/>
+
+			<QuestionBox
+				question={`What if I don’t have a team?`}
+				answer={
+					<span>
+						Don’t worry! We’ll host teambuilding sessions before the extended workshops start.
+<br/><br/>
+						<b>Please note a college team is defined as a team with at least one (1) college student on it, and teams whose members are all high school students constitute as a high school team.</b>
+					</span>
+				}
+			/>
+
+			<QuestionBox
 				question={`What is the application deadline?`}
 				answer={<span>
 							We actually have three application rounds: Early, Regular, and Late! Each one comes with its own perks (for example, all Early applicants are <b>guaranteed</b> to be reimbursed up to $50). The deadlines are below:
@@ -373,7 +393,7 @@ Regular: 4/26/20<br/>
 			<QuestionBox
 				question={`Will you be offering travel reimbursements?`}
 				answer={<span>
-						<b>If you apply through Early, you qualify for up to $50 in travel reimbursement!</b>
+						<b>If you apply through Early, you qualify for up to $50 in travel reimbursement if you are outside of NYC!</b>
 						<br/>
 						<br/>
 
