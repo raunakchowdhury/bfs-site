@@ -1,13 +1,5 @@
 "use strict";
 
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
-
-function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
 
 function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
@@ -16,13 +8,21 @@ function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.
 
 function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
 
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 function App() {
 	var buttonStyles = {
 		position: "fixed",
 		bottom: "2rem",
 		right: "2rem"
 	};
-	return React.createElement("div", null, React.createElement(About, null), React.createElement(Sponsors, null), React.createElement(Venue, null), React.createElement(Schedule, null), React.createElement(FAQs, null), React.createElement(Button, {
+	return React.createElement("div", null, React.createElement(About, null), React.createElement(Sponsors, null), React.createElement(Venue, null), React.createElement(Schedule, null), React.createElement(FAQs, null), React.createElement(Menu, null), React.createElement(Button, {
 		style: buttonStyles,
 		onClick: function onClick() {
 			return window.open("https://hackathonbfs.typeform.com/to/fD5rzJ");
@@ -30,10 +30,117 @@ function App() {
 	}, "Apply Now!"), React.createElement("br", null));
 }
 
-function Button(_ref) {
-	var children = _ref.children,
-		style = _ref.style,
-		onClick = _ref.onClick;
+function Menu(props) {
+	var tabs = [{
+		anchor: "#about",
+		title: "About"
+	}, {
+		anchor: "#sponsors",
+		title: "Sponsors"
+	}, {
+		anchor: "#venue",
+		title: "Venue"
+	}, {
+		anchor: "#schedule",
+		title: "Schedule"
+	}, {
+		anchor: "#faqs",
+		title: "FAQs"
+	}];
+
+	var _React$useState = React.useState(window.innerWidth > 850),
+		_React$useState2 = _slicedToArray(_React$useState, 2),
+		open = _React$useState2[0],
+		setOpen = _React$useState2[1];
+
+	var _React$useState3 = React.useState(""),
+		_React$useState4 = _slicedToArray(_React$useState3, 2),
+		currentTab = _React$useState4[0],
+		setCurrentTab = _React$useState4[1];
+
+	var scrollHandler = function scrollHandler(ev) {
+		var prominentTab = "";
+		tabs.forEach(function (tab) {
+			var anchor = window.document.querySelector(tab.anchor);
+
+			if (anchor) {
+				var distanceTop = anchor.offsetTop - window.scrollY;
+				if (distanceTop < 50) prominentTab = tab.anchor;
+			}
+		});
+		if (prominentTab) setCurrentTab(prominentTab);
+	};
+
+	React.useEffect(function () {
+		scrollHandler();
+		window.addEventListener("scroll", scrollHandler);
+		return function () {
+			return window.removeEventListener("scroll", scrollHandler);
+		};
+	}, []);
+	return React.createElement("div", {
+		style: {
+			zIndex: 99
+		}
+	}, React.createElement("div", {
+		style: {
+			height: "4rem",
+			position: "fixed",
+			right: open ? "9rem" : 0,
+			top: "calc(50vh - 2rem)",
+			backgroundColor: "var(--mdc-theme-primary)",
+			color: "white",
+			paddingTop: "1.2rem",
+			borderRadius: "1rem 0 0 1rem",
+			opacity: open ? 1 : 0.7,
+			transition: "right 0.5s"
+		},
+		onClick: function onClick() {
+			return setOpen(!open);
+		}
+	}, React.createElement("i", {
+		className: "material-icons",
+		style: {
+			height: "100%"
+		}
+	}, "keyboard_arrow_", open ? "right" : "left")), React.createElement("div", {
+		style: {
+			height: "15rem",
+			width: "9rem",
+			top: "calc(50vh - 7.5rem)",
+			backgroundColor: "white",
+			position: "fixed",
+			right: open ? 0 : "-9rem",
+			padding: "2rem",
+			borderRadius: "1rem 0 0 1rem",
+			border: "1px solid grey",
+			borderRight: 0,
+			transition: "right 0.5s"
+		}
+	}, tabs.map(function (tab) {
+		return React.createElement(MenuItem, {
+			tab: tab.anchor,
+			active: currentTab === tab.anchor
+		}, tab.title);
+	})));
+}
+
+function MenuItem(_ref) {
+	var tab = _ref.tab,
+		active = _ref.active,
+		children = _ref.children;
+	return React.createElement("p", null, React.createElement("a", {
+		href: tab,
+		style: {
+			color: active ? "var(--mdc-theme-primary)" : "grey"
+		}
+	}, React.createElement("b", null, children)));
+}
+
+function Button(_ref2) {
+	var children = _ref2.children,
+		style = _ref2.style,
+		onClick = _ref2.onClick;
 	var ref = React.createRef();
 	React.useEffect(function () {
 		window.mdc.ripple.MDCRipple.attachTo(ref.current);
@@ -48,16 +155,16 @@ function Button(_ref) {
 	}), children);
 }
 
-function Container(_ref2) {
-	var children = _ref2.children;
+function Container(_ref3) {
+	var children = _ref3.children;
 	return React.createElement("div", {
 		className: ["content-container"]
 	}, children);
 }
 
-function Title(_ref3) {
-	var children = _ref3.children,
-		center = _ref3.center;
+function Title(_ref4) {
+	var children = _ref4.children,
+		center = _ref4.center;
 	var styles = {
 		fontFamily: "'Red Hat Display', sans-serif",
 		color: "#4cbb85",
@@ -75,11 +182,14 @@ function Title(_ref3) {
 function About() {
 	return React.createElement(Container, null, React.createElement(Title, {
 		center: true
-	}, "About"), React.createElement("p", null, "Blockchains4Hacks is one of the first introductory blockchain-focused hackathons open to high school and college students. For 24 hours, students will learn about ways to integrate blockchain into their applications, hacking away at challenges, and building applications that integrate those services. We plan to host workshops leading up to the hackathon, allowing participants to immerse themselves in blockchain before building their projects."), React.createElement("p", null, "In our continued commitment and support for diversity, we plan to offer travel reimbursements for students who are not located in NYC. We also plan to set funds aside specifically for hackers whose backgrounds are commonly underrepresented in the tech industry, in addition to low income students."), React.createElement("p", null, "Our hope is that students will walk away with a deeper knowledge of blockchain as well as firsthand experience on how to use the technology. We also hope that the projects created at this hackathon will blossom and continue even after B4H 2020 is over."));
+	}, React.createElement("a", {
+		className: "anchor",
+		id: "about"
+	}, "About")), React.createElement("p", null, "Blockchains4Hacks is one of the first introductory blockchain-focused hackathons open to high school and college students. For 24 hours, students will learn about ways to integrate blockchain into their applications, hacking away at challenges, and building applications that integrate those services. We plan to host workshops leading up to the hackathon, allowing participants to immerse themselves in blockchain before building their projects."), React.createElement("p", null, "In our continued commitment and support for diversity, we plan to offer travel reimbursements for students who are not located in NYC. We also plan to set funds aside specifically for hackers whose backgrounds are commonly underrepresented in the tech industry, in addition to low income students."), React.createElement("p", null, "Our hope is that students will walk away with a deeper knowledge of blockchain as well as firsthand experience on how to use the technology. We also hope that the projects created at this hackathon will blossom and continue even after B4H 2020 is over."));
 }
 
-function Grid(_ref4) {
-	var children = _ref4.children;
+function Grid(_ref5) {
+	var children = _ref5.children;
 	return React.createElement("div", {
 		className: "mdc-layout-grid"
 	}, React.createElement("div", {
@@ -87,12 +197,12 @@ function Grid(_ref4) {
 	}, children));
 }
 
-function GridCell(_ref5) {
-	var span = _ref5.span,
-		spanTablet = _ref5.spanTablet,
-		children = _ref5.children,
-		style = _ref5.style,
-		className = _ref5.className;
+function GridCell(_ref6) {
+	var span = _ref6.span,
+		spanTablet = _ref6.spanTablet,
+		children = _ref6.children,
+		style = _ref6.style,
+		className = _ref6.className;
 	var classes = ["mdc-layout-grid__cell--span-" + (span || 4)];
 	if (className) classes.push.apply(classes, _toConsumableArray(className));
 	if (spanTablet) classes.push("mdc-layout-grid__cell--span-".concat(spanTablet, "-tablet"));
@@ -102,13 +212,13 @@ function GridCell(_ref5) {
 	}, children);
 }
 
-function SponsorCell(_ref6) {
-	var alt = _ref6.alt,
-		src = _ref6.src,
-		span = _ref6.span,
-		spanTablet = _ref6.spanTablet,
-		url = _ref6.url,
-		width = _ref6.width;
+function SponsorCell(_ref7) {
+	var alt = _ref7.alt,
+		src = _ref7.src,
+		span = _ref7.span,
+		spanTablet = _ref7.spanTablet,
+		url = _ref7.url,
+		width = _ref7.width;
 	var imageStyles = {
 		maxWidth: "100%",
 		width: width,
@@ -138,7 +248,10 @@ function SponsorCell(_ref6) {
 function Sponsors() {
 	return React.createElement(Container, null, React.createElement(Title, {
 		center: true
-	}, "Sponsors"), React.createElement(Grid, {
+	}, React.createElement("a", {
+		className: "anchor",
+		id: "sponsors"
+	}, "Sponsors")), React.createElement(Grid, {
 		style: ""
 	}, React.createElement(SponsorCell, {
 		alt: "Microsoft Logo",
@@ -225,7 +338,10 @@ function Venue() {
 	};
 	return React.createElement(Container, null, React.createElement(Title, {
 		center: true
-	}, "Venue"), React.createElement("p", null, React.createElement("b", null, "Our venue is located at Microsoft Times Square (11 Times Square, New York, NY 10036).")), React.createElement("p", null, "Located in the heart of NYC and right across from the Port Authority Bus Terminal and the Times Square MTA station, Microsoft Times Square offers a modern and well-equipped hacking space that is easily accessible from all corners of NYC. The commitment of Microsoft Reactor, the overlying organization, to hacker and developer culture as well as diversity and inclusivity cemented this as our choice as a venue to host the hackathon."), React.createElement(Grid, null, React.createElement(GridCell, {
+	}, React.createElement("a", {
+		className: "anchor",
+		id: "venue"
+	}, "Venue")), React.createElement("p", null, React.createElement("b", null, "Our venue is located at Microsoft Times Square (11 Times Square, New York, NY 10036).")), React.createElement("p", null, "Located in the heart of NYC and right across from the Port Authority Bus Terminal and the Times Square MTA station, Microsoft Times Square offers a modern and well-equipped hacking space that is easily accessible from all corners of NYC. The commitment of Microsoft Reactor, the overlying organization, to hacker and developer culture as well as diversity and inclusivity cemented this as our choice as a venue to host the hackathon."), React.createElement(Grid, null, React.createElement(GridCell, {
 		span: 6,
 		spanTablet: 8,
 		style: {
@@ -258,19 +374,22 @@ function VenueMap() {
 function Schedule() {
 	return React.createElement(Container, null, React.createElement(Title, {
 		center: true
-	}, "Schedule"), React.createElement("p", {
+	}, React.createElement("a", {
+		className: "anchor",
+		id: "schedule"
+	}, "Schedule")), React.createElement("p", {
 		className: "text-center"
 	}, "TBD! We will release the schedule closer to the hackathon date."));
 }
 
-function QuestionBox(_ref7) {
-	var question = _ref7.question,
-		answer = _ref7.answer;
+function QuestionBox(_ref8) {
+	var question = _ref8.question,
+		answer = _ref8.answer;
 
-	var _React$useState = React.useState(false),
-		_React$useState2 = _slicedToArray(_React$useState, 2),
-		open = _React$useState2[0],
-		setOpen = _React$useState2[1];
+	var _React$useState5 = React.useState(false),
+		_React$useState6 = _slicedToArray(_React$useState5, 2),
+		open = _React$useState6[0],
+		setOpen = _React$useState6[1];
 
 	var questionStyles = {
 		border: "solid 1px grey",
@@ -305,7 +424,10 @@ function QuestionBox(_ref7) {
 function FAQs() {
 	return React.createElement(Container, null, React.createElement(Title, {
 		center: true
-	}, "FAQs"), React.createElement(QuestionBox, {
+	}, React.createElement("a", {
+		className: "anchor",
+		id: "faqs"
+	}, "FAQs")), React.createElement(QuestionBox, {
 		question: "What is a hackathon?",
 		answer: React.createElement("span", null, "A hackathon is a gathering where you can come together with other engineers, programmers, and cool people to turn your ideas into a real project in 24 hours. You take care of hacking, programming, creativity, and having a good time. We provide the venue, mentors, fun activities, speakers, workshops, food, friends, and almost everything you\u2019ll ever need. ")
 	}), React.createElement(QuestionBox, {
