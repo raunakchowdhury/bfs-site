@@ -143,7 +143,7 @@ function Button(_ref2) {
 		onClick = _ref2.onClick;
 	var ref = React.createRef();
 	React.useEffect(function () {
-		window.mdc.ripple.MDCRipple.attachTo(ref.current);
+		if (window.mdc) window.mdc.ripple.MDCRipple.attachTo(ref.current);
 	}, []);
 	return React.createElement("button", {
 		className: "mdc-button mdc-button--raised",

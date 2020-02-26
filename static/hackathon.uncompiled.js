@@ -145,7 +145,8 @@ function Button({children, style, onClick}){
 	const ref = React.createRef();
 
 	React.useEffect(() => {
-		window.mdc.ripple.MDCRipple.attachTo(ref.current);
+		if(window.mdc)
+			window.mdc.ripple.MDCRipple.attachTo(ref.current);
 	}, []);
 
 	return (
