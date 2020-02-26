@@ -12,12 +12,131 @@ function App() {
 			<Venue/>
 			<Schedule/>
 			<FAQs/>
+			<Menu />
 
 			<Button style={buttonStyles} onClick={() => window.open("https://hackathonbfs.typeform.com/to/fD5rzJ")}>
 				Apply Now!
 			</Button>
 			<br/>
 		</div>
+	)
+}
+
+function Menu(props) {
+	const tabs = [
+		{
+			anchor: "#about",
+			title: "About"
+		},
+		{
+			anchor: "#sponsors",
+			title: "Sponsors"
+		},
+		{
+			anchor: "#venue",
+			title: "Venue"
+		},
+		{
+			anchor: "#schedule",
+			title: "Schedule"
+		},
+		{
+			anchor: "#faqs",
+			title: "FAQs"
+		}
+	];
+
+	const [open, setOpen] = React.useState(window.innerWidth > 850);
+
+	const [currentTab, setCurrentTab] = React.useState("");
+
+	const scrollHandler = (ev) => {
+		let prominentTab = "";
+
+		tabs.forEach(tab => {
+			const anchor = window.document.querySelector(tab.anchor);
+
+			if(anchor){
+				const distanceTop = anchor.offsetTop - window.scrollY ;
+
+				if( distanceTop < 50)
+					prominentTab = tab.anchor;
+
+			}
+		});
+
+		if(prominentTab)
+			setCurrentTab(prominentTab);
+	};
+
+	React.useEffect(() => {
+		scrollHandler();
+		window.addEventListener("scroll", scrollHandler);
+
+		return () => window.removeEventListener("scroll", scrollHandler);
+
+		}, []);
+
+	return (
+		<div
+			style={ { zIndex: 99} }
+		>
+			<div
+				style={ {
+					height: "4rem",
+					position: "fixed",
+					right: open ? "9rem" : 0,
+					top: "calc(70vh - 2rem)",
+					backgroundColor: "var(--mdc-theme-primary)",
+					color: "white",
+					paddingTop: "1.2rem",
+					borderRadius: "1rem 0 0 1rem",
+					opacity: open ? 1: 0.7,
+					transition: "right 0.5s"
+				} }
+				onClick={() => setOpen(!open)}
+			>
+				<i className={"material-icons"}
+				   style={ {
+					   height: "100%"
+				   } }
+				>keyboard_arrow_{open ? "right" : "left"}</i>
+			</div>
+
+			<div
+				style={ {
+					height: "15rem",
+					width: "9rem",
+					top: "calc(70vh - 7.5rem)",
+					backgroundColor: "white",
+					position: "fixed",
+					right: open ? 0 : "-9rem",
+					padding: "2rem",
+					borderRadius: "1rem 0 0 1rem",
+					border: "1px solid grey",
+					borderRight: 0,
+					transition: "right 0.5s"
+				} }
+			>
+				{
+					tabs.map(tab => (
+						<MenuItem tab={tab.anchor} active={currentTab === tab.anchor}>{tab.title}</MenuItem>
+					))
+				}
+			</div>
+		</div>
+	)
+}
+
+function MenuItem({tab, active, children}){
+	return (
+		<p>
+			<a href={tab} style={
+				{color: active ? "var(--mdc-theme-primary)": "grey"}
+			}>
+				<b>{children}</b>
+			</a>
+		</p>
 	)
 }
 
@@ -67,7 +186,9 @@ function Title({children, center}){
 function About() {
 	return (
 		<Container>
-			<Title center>About</Title>
+			<Title center>
+				<a className={"anchor"} id={"about"}>About</a>
+			</Title>
 			<p>
 				Blockchains4Hacks is one of the first introductory blockchain-focused hackathons open to high school and college students. For 24 hours, students will learn about ways to integrate blockchain into their applications, hacking away at challenges, and building applications that integrate those services. We plan to host workshops leading up to the hackathon, allowing participants to immerse themselves in blockchain before building their projects.
 			</p>
@@ -135,7 +256,9 @@ function Sponsors(){
 
 	return (
 		<Container>
-			<Title center>Sponsors</Title>
+			<Title center>
+				<a className={"anchor"} id={"sponsors"}>Sponsors</a>
+			</Title>
 			<Grid style="">
 				<SponsorCell
 					alt={"Microsoft Logo"}
@@ -251,7 +374,9 @@ function Venue(){
 	};
 	return (
 		<Container>
-			<Title center>Venue</Title>
+			<Title center>
+				<a className={"anchor"} id={"venue"} >Venue</a>
+			</Title>
 			<p><b>Our venue is located at Microsoft Times Square (11 Times Square, New York, NY 10036).</b></p>
 			<p>
 				Located in the heart of NYC and right across from the Port Authority Bus Terminal and the Times Square MTA station, Microsoft Times Square offers a modern and well-equipped hacking space that is easily accessible from all corners of NYC. The commitment of Microsoft Reactor, the overlying organization, to hacker and developer culture as well as diversity and inclusivity cemented this as our choice as a venue to host the hackathon.
@@ -284,7 +409,9 @@ function VenueMap(){
 function Schedule(){
 	return (
 		<Container>
-			<Title center>Schedule</Title>
+			<Title center>
+				<a className={"anchor"} id={"schedule"}>Schedule</a>
+			</Title>
 			<p className="text-center">TBD! We will release the schedule closer to the hackathon date.</p>
 		</Container>
 	)
@@ -332,7 +459,9 @@ function QuestionBox({question, answer}){
 function FAQs() {
 	return (
 		<Container>
-			<Title center>FAQs</Title>
+			<Title center>
+				<a className={"anchor"} id={"faqs"}>FAQs</a>
+			</Title>
 
 			<QuestionBox
 				question={`What is a hackathon?`}

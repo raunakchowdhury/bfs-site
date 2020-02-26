@@ -300,6 +300,11 @@ h1 {
   --mdc-theme-text-icon-on-dark: rgba(255, 255, 255, 0.5);
 }
 
+.anchor {
+  padding-top: 5rem;
+}
+
+
 .map-container {
   overflow: hidden;
   padding-bottom: 24rem;
