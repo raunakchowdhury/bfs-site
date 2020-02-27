@@ -297,8 +297,14 @@ function Sponsors() {
 		url: "https://www.kadena.io/",
 		width: "9rem"
 	})), React.createElement(Grid, null, React.createElement(GridCell, {
-		span: 4,
+		span: 2,
 		className: ["desktop-only"]
+	}), React.createElement(SponsorCell, {
+		alt: "Digital Ocean Logo",
+		src: "/supporters/digital-ocean.png",
+		url: "https://digitalocean.com/",
+		width: "8rem",
+		spanTablet: 8
 	}), React.createElement(SponsorCell, {
 		alt: "Hack Club Bank Logo",
 		src: "/hack-club-branding.png",

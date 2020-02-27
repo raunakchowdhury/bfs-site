@@ -326,8 +326,16 @@ function Sponsors(){
 
 			<Grid>
 				<GridCell
-					span={4}
+					span={2}
 					className={["desktop-only"]}
+				/>
+
+				<SponsorCell
+					alt={"Digital Ocean Logo"}
+					src={"/supporters/digital-ocean.png"}
+					url={"https://digitalocean.com/"}
+					width={"8rem"}
+					spanTablet={8}
 				/>
 
 				<SponsorCell
