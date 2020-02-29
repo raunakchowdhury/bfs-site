@@ -20,7 +20,8 @@ function App() {
 	var buttonStyles = {
 		position: "fixed",
 		bottom: "2rem",
-		right: "2rem"
+		right: "2rem",
+		zIndex: 99
 	};
 	return React.createElement("div", null, React.createElement(About, null), React.createElement(Sponsors, null), React.createElement(Venue, null), React.createElement(Schedule, null), React.createElement(FAQs, null), React.createElement(Menu, null), React.createElement(Button, {
 		style: buttonStyles,
@@ -93,7 +94,8 @@ function Menu(props) {
 			paddingTop: "1.2rem",
 			borderRadius: "1rem 0 0 1rem",
 			opacity: open ? 1 : 0.7,
-			transition: "right 0.5s"
+			transition: "right 0.5s",
+			cursor: "pointer"
 		},
 		onClick: function onClick() {
 			return setOpen(!open);
@@ -231,6 +233,8 @@ function SponsorCell(_ref7) {
 	var cellStyles = {
 		height: "10rem"
 	};
+	if (!span) span = 3;
+	if (!spanTablet) spanTablet = 4;
 	return React.createElement(GridCell, {
 		span: span,
 		spanTablet: spanTablet,
@@ -272,6 +276,11 @@ function Sponsors() {
 		src: "/supporters/ey.png",
 		url: "https://www.ey.com/"
 	}), React.createElement(SponsorCell, {
+		alt: "Amazon Logo",
+		src: "/supporters/amazon.png",
+		url: "https://amazon.com",
+		width: "11rem"
+	}), React.createElement(SponsorCell, {
 		alt: "Ethereum Logo",
 		src: "/ethereum-branding.png",
 		url: "https://ethereum.org",
@@ -287,6 +296,11 @@ function Sponsors() {
 		url: "https://gemini.com/",
 		width: "9rem"
 	}), React.createElement(SponsorCell, {
+		alt: "Cisco Logo",
+		src: "/supporters/cisco.png",
+		url: "https://cisco.com/",
+		width: "10rem"
+	}), React.createElement(SponsorCell, {
 		alt: "Trail of Bits Logo",
 		src: "/supporters/trail-of-bits.png",
 		url: "https://www.trailofbits.com/",
@@ -297,20 +311,14 @@ function Sponsors() {
 		url: "https://www.kadena.io/",
 		width: "9rem"
 	})), React.createElement(Grid, null, React.createElement(GridCell, {
-		span: 2,
+		span: 4,
 		className: ["desktop-only"]
-	}), React.createElement(SponsorCell, {
-		alt: "Digital Ocean Logo",
-		src: "/supporters/digital-ocean.png",
-		url: "https://digitalocean.com/",
-		width: "8rem",
-		spanTablet: 8
 	}), React.createElement(SponsorCell, {
 		alt: "Hack Club Bank Logo",
 		src: "/hack-club-branding.png",
 		url: "https://hackclub.com/bank/",
 		width: "11rem",
-		spanTablet: 8
+		span: 4
 	})), React.createElement(Title, {
 		center: true
 	}, "Travel Sponsors"), React.createElement(Grid, null, React.createElement(GridCell, {
