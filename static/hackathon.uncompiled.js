@@ -242,7 +242,8 @@ function SponsorCell({alt, src, span, spanTablet, url, width}){
 		objectFit: "contain",
 		display: "block",
 		marginLeft: "auto",
-		marginRight: "auto"
+		marginRight: "auto",
+		cursor: "pointer"
 	};
 
 	const cellStyles = {

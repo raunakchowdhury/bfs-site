@@ -228,7 +228,8 @@ function SponsorCell(_ref7) {
 		objectFit: "contain",
 		display: "block",
 		marginLeft: "auto",
-		marginRight: "auto"
+		marginRight: "auto",
+		cursor: "pointer"
 	};
 	var cellStyles = {
 		height: "10rem"
