@@ -278,9 +278,9 @@ function Sponsors() {
 		url: "https://www.ey.com/"
 	}), React.createElement(SponsorCell, {
 		alt: "Amazon Logo",
-		src: "/supporters/amazon.png",
+		src: "/supporters/aws.png",
 		url: "https://amazon.com",
-		width: "11rem"
+		width: "9rem"
 	}), React.createElement(SponsorCell, {
 		alt: "Ethereum Logo",
 		src: "/ethereum-branding.png",

@@ -298,9 +298,9 @@ function Sponsors(){
 
 				<SponsorCell
 					alt={"Amazon Logo"}
-					src={"/supporters/amazon.png"}
+					src={"/supporters/aws.png"}
 					url={"https://amazon.com"}
-					width={"11rem"}
+					width={"9rem"}
 				/>
 
 				<SponsorCell
