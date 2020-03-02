@@ -279,7 +279,7 @@ function Sponsors() {
 	}), React.createElement(SponsorCell, {
 		alt: "Amazon Logo",
 		src: "/supporters/aws.png",
-		url: "https://amazon.com",
+		url: "https://aws.com",
 		width: "9rem"
 	}), React.createElement(SponsorCell, {
 		alt: "Ethereum Logo",
@@ -322,8 +322,19 @@ function Sponsors() {
 		span: 4
 	})), React.createElement(Title, {
 		center: true
+	}, "Community Sponsors"), React.createElement(Grid, null, React.createElement(GridCell, {
+		span: 4,
+		className: ["desktop-only"]
+	}), React.createElement(SponsorCell, {
+		alt: "AnitaB Logo",
+		url: "https://anitab.org/",
+		src: "/supporters/anita_b.png",
+		width: "12rem",
+		span: 4
+	})), React.createElement(Title, {
+		center: true
 	}, "Travel Sponsors"), React.createElement(Grid, null, React.createElement(GridCell, {
-		span: 2,
+		span: 3,
 		className: ["desktop-only"]
 	}), React.createElement(SponsorCell, {
 		alt: "Ben Logo",

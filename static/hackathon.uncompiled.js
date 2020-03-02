@@ -299,7 +299,7 @@ function Sponsors(){
 				<SponsorCell
 					alt={"Amazon Logo"}
 					src={"/supporters/aws.png"}
-					url={"https://amazon.com"}
+					url={"https://aws.com"}
 					width={"9rem"}
 				/>
 
@@ -362,9 +362,21 @@ function Sponsors(){
 				/>
 			</Grid>
 
+			<Title center>Community Sponsors</Title>
+			<Grid>
+				<GridCell span={4} className={["desktop-only"]} />
+				<SponsorCell
+					alt="AnitaB Logo"
+					url={"https://anitab.org/"}
+					src={"/supporters/anita_b.png"}
+					width="12rem"
+					span={4}
+				/>
+			</Grid>
+
 			<Title center>Travel Sponsors</Title>
 			<Grid>
-				<GridCell span={2} className={["desktop-only"]} />
+				<GridCell span={3} className={["desktop-only"]} />
 				<SponsorCell
 					alt="Ben Logo"
 					url={"https://blockchainedu.org/"}
@@ -379,6 +391,7 @@ function Sponsors(){
 					width="13rem"
 				/>
 			</Grid>
+
 			<p className="text-center">
 				<b>
 					If you are interested in sponsoring/partnering with us for the hackathon, please email us at <a href="mailto: hackathon@blockchainsforschools.org!">hackathon@blockchainsforschools.org</a>
