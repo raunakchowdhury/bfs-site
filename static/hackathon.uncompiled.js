@@ -362,7 +362,7 @@ function Sponsors(){
 				/>
 			</Grid>
 
-			<Title center>Community Sponsors</Title>
+			<Title center>Community Partners</Title>
 			<Grid>
 				<GridCell span={4} className={["desktop-only"]} />
 				<SponsorCell

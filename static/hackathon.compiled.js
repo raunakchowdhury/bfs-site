@@ -322,7 +322,7 @@ function Sponsors() {
 		span: 4
 	})), React.createElement(Title, {
 		center: true
-	}, "Community Sponsors"), React.createElement(Grid, null, React.createElement(GridCell, {
+	}, "Community Partners"), React.createElement(Grid, null, React.createElement(GridCell, {
 		span: 4,
 		className: ["desktop-only"]
 	}), React.createElement(SponsorCell, {
