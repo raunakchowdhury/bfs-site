@@ -356,8 +356,13 @@ function Sponsors() {
 	})), React.createElement(Title, {
 		center: true
 	}, "Travel Sponsors"), React.createElement(Grid, null, React.createElement(GridCell, {
-		span: 3,
+		span: 2,
 		className: ["desktop-only"]
+	}), React.createElement(SponsorCell, {
+		alt: "MIT Entrepreneurship Logo",
+		url: "https://entrepreneurship.mit.edu/",
+		src: "/supporters/martin-trust.png",
+		width: "13rem"
 	}), React.createElement(SponsorCell, {
 		alt: "Ben Logo",
 		url: "https://blockchainedu.org/",
