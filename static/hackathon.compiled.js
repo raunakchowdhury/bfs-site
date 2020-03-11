@@ -23,7 +23,7 @@ function App() {
 		right: "2rem",
 		zIndex: 99
 	};
-	return React.createElement("div", null, React.createElement(About, null), React.createElement(Sponsors, null), React.createElement(Venue, null), React.createElement(Schedule, null), React.createElement(FAQs, null), React.createElement(Menu, null), React.createElement(Button, {
+	return React.createElement("div", null, React.createElement(Warning, null), React.createElement(About, null), React.createElement(Sponsors, null), React.createElement(Venue, null), React.createElement(Schedule, null), React.createElement(FAQs, null), React.createElement(Menu, null), React.createElement(Button, {
 		style: buttonStyles,
 		onClick: function onClick() {
 			return window.open("https://hackathonbfs.typeform.com/to/fD5rzJ");
@@ -31,8 +31,27 @@ function App() {
 	}, "Apply Now!"), React.createElement("br", null));
 }
 
+function Warning(props) {
+	return React.createElement(Container, null, React.createElement(Title, {
+		center: true,
+		style: {
+			color: "red"
+		}
+	}, React.createElement("a", {
+		className: "anchor",
+		id: "covid-19"
+	}, "ATTN:")), React.createElement("p", {
+		style: {
+			color: "red"
+		}
+	}, React.createElement("b", null, "BlockchainsForSchools is closely monitoring the current situation regarding COVID-19. The organizers have decided to postpone making a decision until April 1st, as the situation for the NYC region is in flux. The safety of our participants and staff is our number one priority, and the decision made will be consistent with CDC and state guidelines. In the event the May hackathon is canceled, we plan to postpone the event to the fall.", React.createElement("br", null), React.createElement("br", null), "Updated as of March 10th, 2020")));
+}
+
 function Menu(props) {
 	var tabs = [{
+		anchor: "#covid-19",
+		title: "COVID-19"
+	}, {
 		anchor: "#about",
 		title: "About"
 	}, {
@@ -166,7 +185,9 @@ function Container(_ref3) {
 
 function Title(_ref4) {
 	var children = _ref4.children,
-		center = _ref4.center;
+		center = _ref4.center,
+		_ref4$style = _ref4.style,
+		style = _ref4$style === void 0 ? {} : _ref4$style;
 	var styles = {
 		fontFamily: "'Red Hat Display', sans-serif",
 		color: "#4cbb85",
@@ -175,6 +196,7 @@ function Title(_ref4) {
 		marginTop: "2rem",
 		marginBottom: "1.5rem"
 	};
+	Object.assign(styles, style);
 	if (center) styles.textAlign = "center";
 	return React.createElement("h2", {
 		style: styles

@@ -8,6 +8,7 @@ function App() {
 
 	return (
 		<div>
+			<Warning/>
 			<About/>
 			<Sponsors/>
 			<Venue/>
@@ -23,8 +24,26 @@ function App() {
 	)
 }
 
+function Warning(props){
+	return (
+		<Container>
+			<Title center style={ {color: "red"} }>
+				<a className={"anchor"} id={"covid-19"}>ATTN:</a>
+			</Title>
+			<p style={ {color: "red"} }><b>BlockchainsForSchools is closely monitoring the current situation regarding COVID-19. The organizers have decided to postpone making a decision until April 1st, as the situation for the NYC region is in flux. The safety of our participants and staff is our number one priority, and the decision made will be consistent with CDC and state guidelines. In the event the May hackathon is canceled, we plan to postpone the event to the fall.
+			<br/>
+			<br/>
+				Updated as of March 10th, 2020</b></p>
+		</Container>
+	)
+}
+
 function Menu(props) {
 	const tabs = [
+		{
+			anchor: "#covid-19",
+			title: "COVID-19"
+		},
 		{
 			anchor: "#about",
 			title: "About"
@@ -167,7 +186,7 @@ function Container({children}){
 	)
 }
 
-function Title({children, center}){
+function Title({children, center, style = {}}){
 	const styles = {
 		fontFamily: `'Red Hat Display', sans-serif`,
 		color: "#4cbb85",
@@ -177,8 +196,11 @@ function Title({children, center}){
 		marginBottom: "1.5rem"
 	};
 
+	Object.assign(styles, style);
 	if(center)
 		styles.textAlign = "center";
+
+
 
 	return (
 		<h2 style={styles} >
