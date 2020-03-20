@@ -106,7 +106,7 @@ function Menu(props) {
 					height: "4rem",
 					position: "fixed",
 					right: open ? "9rem" : 0,
-					top: "calc(50vh - 2rem)",
+					top: "calc(50vh)",
 					backgroundColor: "var(--mdc-theme-primary)",
 					color: "white",
 					paddingTop: "1.2rem",
@@ -126,7 +126,7 @@ function Menu(props) {
 
 			<div
 				style={ {
-					height: "15rem",
+					height: "18rem",
 					width: "9rem",
 					top: "calc(50vh - 7.5rem)",
 					backgroundColor: "white",
