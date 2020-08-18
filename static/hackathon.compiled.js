@@ -555,16 +555,21 @@ function Sponsors() {
     React.createElement(
       Grid,
       null,
-      React.createElement(GridCell, {
-        span: 4,
-        className: ["desktop-only"],
-      }),
       React.createElement(SponsorCell, {
         alt: "Hack Club Bank Logo",
         src: "/hack-club-branding.png",
         url: "https://hackclub.com/bank/",
         width: "11rem",
-        span: 4,
+        span: 6,
+        spanTablet: 8,
+      }),
+      React.createElement(SponsorCell, {
+        alt: "Hack Club Bank Logo",
+        src: "/mit-sandbox.png",
+        url: "https://hackclub.com/bank/",
+        width: "11rem",
+        span: 6,
+        spanTablet: 8,
       })
     ),
     React.createElement(
